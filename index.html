@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>JavaScript XMPP Client by sualko</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/sualko/jsxc">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>JavaScript XMPP Client</h1>
+            <h2>Real-time chat app</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/sualko/jsxc/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/sualko/jsxc/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a name="javascript-xmpp-client" class="anchor" href="#javascript-xmpp-client"><span class="octicon octicon-link"></span></a>JavaScript Xmpp Client</h1>
+
+<p><strong>Beware! This is beta software.</strong></p>
+
+<p>Real-time chat app. This app requires external XMPP server (openfire, ejabberd etc.).</p>
+
+<h3>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h3>
+
+<ul>
+<li>integration into existing ui</li>
+<li>one-to-one conversation (XMPP)</li>
+<li>encrypted one-to-one conversation (OTR)
+
+<ul>
+<li>use of whitespace tags to start a OTR session</li>
+</ul>
+</li>
+<li>user verification (SMP)</li>
+<li>encrypted one-to-one video call (WebRTC)
+
+<ul>
+<li><a href="http://tools.ietf.org/html/draft-uberti-behave-turn-rest-00">TURN REST API</a></li>
+<li>fullscreen mode</li>
+<li>snapshots</li>
+</ul>
+</li>
+<li>auto link-detection</li>
+<li>emotions</li>
+<li>roster management </li>
+<li>multi-language support (de, en)</li>
+<li>multi tab support</li>
+</ul><h3>
+<a name="supported-protocols" class="anchor" href="#supported-protocols"><span class="octicon octicon-link"></span></a>Supported protocols</h3>
+
+<ul>
+<li>XMPP Core (RFC6120)</li>
+<li>XMPP IM (RFC6121)</li>
+<li>Bidirectional-streams Over Synchronous HTTP (XEP-0124)</li>
+<li>XMPP Over BOSH (XEP-0206)</li>
+<li>Service Discovery (XEP-0030)</li>
+<li>CAP (XEP-0127)</li>
+<li>Jingle (XEP-0166)</li>
+<li>Jingle RTP Sessions (XEP-0167)</li>
+</ul><h3>
+<a name="supported-browsers" class="anchor" href="#supported-browsers"><span class="octicon octicon-link"></span></a>Supported browsers</h3>
+
+<ul>
+<li>Full support for <strong>Chrome</strong> and <strong>Firefox</strong>.</li>
+<li>
+<strong>IE</strong> doesn't support multi tabs, WebRTC and Notifications.</li>
+<li>
+<strong>Safari</strong> doesn't support WebRTC and Notifications.</li>
+</ul><h3>
+<a name="planned-features" class="anchor" href="#planned-features"><span class="octicon octicon-link"></span></a>Planned features</h3>
+
+<ul>
+<li>multi user chat</li>
+<li>video conference</li>
+<li>encrypted file transfer </li>
+</ul><h2>
+<a name="developer-notes" class="anchor" href="#developer-notes"><span class="octicon octicon-link"></span></a>Developer notes</h2>
+
+<p>Please execude the following commands to get a copy of the code:</p>
+
+<pre><code>git clone https://github.com/sualko/jsxc/
+git submodule update --init
+</code></pre>
+
+<h3>
+<a name="libaries" class="anchor" href="#libaries"><span class="octicon octicon-link"></span></a>Libaries</h3>
+
+<ul>
+<li>jQuery (<a href="http://jquery.com/">http://jquery.com/</a>)</li>
+<li>Strophe.js (<a href="http://strophe.im/strophejs/">http://strophe.im/strophejs/</a>)</li>
+<li>Strophe.js Plugins (<a href="https://github.com/strophe/strophejs-plugins">https://github.com/strophe/strophejs-plugins</a>)</li>
+<li>OTR (<a href="https://github.com/arlolra/otr">https://github.com/arlolra/otr</a>)</li>
+<li>strophe.jingle (<a href="https://github.com/ESTOS/strophe.jingle">https://github.com/ESTOS/strophe.jingle</a>)</li>
+</ul><h3>
+<a name="events" class="anchor" href="#events"><span class="octicon octicon-link"></span></a>Events</h3>
+
+<p>coming soon...</p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/sualko">sualko</a> can be found on <a href="https://github.com/sualko/jsxc">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
