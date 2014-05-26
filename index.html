@@ -3,66 +3,42 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
-    
-    <link rel="canonical" href="http://www.jsxc.org/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-      
-      if (window.location.href.indexOf('http://sualko.github.io') === 0) {
-        window.location.href = 'http://www.jsxc.org/';
-      }
-    </script>
     <title>JavaScript XMPP Client by sualko</title>
   </head>
 
   <body>
-    <a id="forkme_banner" href="https://github.com/sualko/jsxc">View on GitHub</a>
-    <div class="shell">
+    <header>
+      <div class="inner">
+        <h1>JavaScript XMPP Client</h1>
+        <h2>Real-time chat app</h2>
+        <a href="https://github.com/sualko/jsxc" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>JavaScript XMPP Client</h1>
-            <h2>Real-time chat app</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
-
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/sualko/jsxc/zipball/master" class="zip"><em>download core</em> .ZIP</a><a href="https://github.com/sualko/jsxc/tarball/master" class="tgz"><em>download core</em> .TGZ</a>
-        </span>
-      </section>
-
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-
-      
-        <h1>
-<a name="javascript-xmpp-client" class="anchor" href="#javascript-xmpp-client"><span class="octicon octicon-link"></span></a>JSXC - Core</h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="jsxc---core" class="anchor" href="#jsxc---core"><span class="octicon octicon-link"></span></a>
+<a name="javascript-xmpp-client" href="#javascript-xmpp-client"></a>JSXC - Core</h1>
 
 <p><strong>Beware! This is beta software.</strong></p>
 
 <p>Real-time chat app. This app requires external XMPP server (openfire, ejabberd etc.).</p>
 
 <h3>
-<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h3>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>
+<a name="features" href="#features"></a>Features</h3>
 
 <ul>
 <li>integration into existing ui</li>
@@ -72,6 +48,7 @@
 <ul>
 <li>use of whitespace tags to start a OTR session</li>
 </ul>
+<p></p>
 </li>
 <li>user verification (SMP)</li>
 <li>encrypted one-to-one video call (WebRTC)
@@ -81,6 +58,7 @@
 <li>fullscreen mode</li>
 <li>snapshots</li>
 </ul>
+<p></p>
 </li>
 <li>auto link-detection</li>
 <li>emotions</li>
@@ -90,10 +68,9 @@
 <li>vCard avatar</li>
 <li>sound notifications (if tab is hidden)</li>
 <li>received notifications (if available)</li>
-</ul>
-
-<h3>
-<a name="supported-protocols" class="anchor" href="#supported-protocols"><span class="octicon octicon-link"></span></a>Supported protocols</h3>
+</ul><h3>
+<a name="supported-protocols" class="anchor" href="#supported-protocols"><span class="octicon octicon-link"></span></a>
+<a name="supported-protocols" href="#supported-protocols"></a>Supported protocols</h3>
 
 <ul>
 <li>XMPP Core (RFC6120)</li>
@@ -108,7 +85,8 @@
 <li>vCard-Based Avatars (XEP-0153)</li>
 <li>Message Delivery Receipts (XEP-0184)</li>
 </ul><h3>
-<a name="supported-browsers" class="anchor" href="#supported-browsers"><span class="octicon octicon-link"></span></a>Supported browsers</h3>
+<a name="supported-browsers" class="anchor" href="#supported-browsers"><span class="octicon octicon-link"></span></a>
+<a name="supported-browsers" href="#supported-browsers"></a>Supported browsers</h3>
 
 <ul>
 <li>Full support for <strong>Chrome</strong> and <strong>Firefox</strong>.</li>
@@ -117,43 +95,48 @@
 <li>
 <strong>Safari</strong> doesn't support WebRTC and Notifications.</li>
 </ul><h3>
-<a name="planned-features" class="anchor" href="#planned-features"><span class="octicon octicon-link"></span></a>Planned features</h3>
+<a name="planned-features" class="anchor" href="#planned-features"><span class="octicon octicon-link"></span></a>
+<a name="planned-features" href="#planned-features"></a>Planned features</h3>
 
 <ul>
 <li>multi user chat</li>
 <li>video conference</li>
 <li>encrypted file transfer </li>
-</ul>
+</ul><h1>
+<a name="versions" class="anchor" href="#versions"><span class="octicon octicon-link"></span></a>Versions</h1>
 
-<h1>Versions</h1>
-      There are several versions for different platforms depending on jsxc core:
-      <ul>
-        <li>Owncloud (<a href="https://github.com/sualko/ojsxc/releases">ojsxc</a>)</li>
-        <li>SOGo (<a href="https://github.com/sualko/sjsxc/">sjsxc</a>)</li>
-      </ul>
+<pre><code>  There are several versions for different platforms depending on jsxc core:
+  &lt;ul&gt;
+    &lt;li&gt;Owncloud (&lt;a href="https://github.com/sualko/ojsxc/releases"&gt;ojsxc&lt;/a&gt;)&lt;/li&gt;
+    &lt;li&gt;SOGo (&lt;a href="https://github.com/sualko/sjsxc/"&gt;sjsxc&lt;/a&gt;)&lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre>
 
-<h1>Screenshots</h1>
-<a href="images/owncloud-screenshot.png"><img src="images/owncloud-screenshot-thumb.png" alt="Screenshot Owncloud"/></a>
-<a href="images/SOGo-screenshot.png"><img src="images/SOGo-screenshot-thumb.png" alt="Screenshot SOGo"/></a>
-<a href="images/rz-screenshot.png"><img src="images/rz-screenshot-thumb.png" alt="Screenshot RZ"/></a>
+<h1>
+<a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h1>
 
+<p><a href="images/owncloud-screenshot.png"><img src="images/owncloud-screenshot-thumb.png" alt="Screenshot Owncloud"></a>
+<a href="images/SOGo-screenshot.png"><img src="images/SOGo-screenshot-thumb.png" alt="Screenshot SOGo"></a>
+<a href="images/rz-screenshot.png"><img src="images/rz-screenshot-thumb.png" alt="Screenshot RZ"></a></p>
+        </section>
 
-      </section>
+        <aside id="sidebar">
+          <a href="https://github.com/sualko/jsxc/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/sualko/jsxc/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/sualko">sualko</a> can be found on <a href="https://github.com/sualko/jsxc">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
+          <p class="repo-owner"><a href="https://github.com/sualko/jsxc"></a> is maintained by <a href="https://github.com/sualko">sualko</a>.</p>
 
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
 
-    
+  
   </body>
 </html>
