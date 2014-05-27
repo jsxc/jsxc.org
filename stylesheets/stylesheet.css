@@ -2,6 +2,16 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+    font-family: 'Architects Daughter';
+    src: url('../fonts/architectsdaughter-webfont.eot');
+    src: url('../fonts/architectsdaughter-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/architectsdaughter-webfont.woff') format('woff'),
+         url('../fonts/architectsdaughter-webfont.ttf') format('truetype'),
+         url('../fonts/architectsdaughter-webfont.svg#architects_daughterregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
