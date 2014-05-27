@@ -86,15 +86,15 @@ header {
 
 header h1 {
   letter-spacing: -1px;
-  font-size: 72px;
+  font-size: 60px;
   color: #fff;
   line-height: 1;
   margin-bottom: 0.2em;
-  width: 540px;
+  width: 650px;
 }
 
 header h2 {
-  font-size: 26px;
+  font-size: 23px;
   color: #9ddcff;
   font-weight: normal;
   line-height: 1.3;
@@ -144,7 +144,6 @@ nav#mainnav {
   width: 200px;
   padding-left: 20px;
   float: right;
-  font-size: 12px;
   line-height: 1.3;
   margin-bottom:40px;
 }
@@ -156,7 +155,7 @@ nav#mainnav li, nav#mainnav li a, nav#mainnav li a:hover{
 	color: #474747;
 	font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
    line-height: 30px;
-   font-size: 20px;
+   font-size: 17px;
    position: relative;
 }
 nav#mainnav li a:hover{
@@ -168,6 +167,7 @@ nav#mainnav li:hover:before{
 	position:absolute;
 	font-size:110%;
 	left: -0.9em;
+	font-weight:bold;
 }
 
 #downloads {
@@ -200,7 +200,7 @@ aside a.button {
   display: block;
   background: transparent url(../images/download-button.png) 0 0 no-repeat;
   margin-bottom: 20px;
-  font-size: 21px;
+  font-size: 19px;
 }
 
 code, pre {
