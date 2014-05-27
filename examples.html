@@ -4,7 +4,7 @@
 <meta charset='utf-8'>
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
@@ -13,13 +13,13 @@
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<title>JSXC: JavaScript XMPP Client</title>
+<title>JSXC: JavaScript XMPP Client – Examples</title>
 </head>
 
 <body>
 	<header>
 		<div class="inner">
-			<h1>JSXC</h1>
+			<h1>JSXC: Examples</h1>
 			<h2>JavaScript XMPP Chat</h2>
 			<a href="https://github.com/sualko/jsxc" class="button"><small>View project on</small>GitHub</a>
 		</div>
@@ -28,46 +28,43 @@
 	<div id="content-wrapper">
 		<div class="inner clearfix">
 			<section id="main-content">
-                <a href="images/SOGo-screenshot.png"><img src="images/SOGo-screenshot-thumb.png" alt="Screenshot SOGo" align="right"></a>
-				<h2>
-					<a name="jsxc---core" class="anchor" href="#jsxc---core"><span class="octicon octicon-link"></span></a>
-                    <a name="javascript-xmpp-client" href="#javascript-xmpp-client"></a>Add real-time XMPP chat to any web application!
-				</h2>
+                <h1>Usage Examples</h1>
 
-                <p>
-                    Communication should be immediate, secure, private, and without hurdles.
-                    The <a href="http://xmpp.org/">Extensible Messaging and Presence Protocol (XMPP)</a>
-                    already provides the first three. But in today's world, most users will be in the browser,
-                    so even the most basic application installation can be a major hurdle.
-                </p>
-                <a href="images/rz-screenshot.png"><img src="images/rz-screenshot-thumb.png" alt="Screenshot RZ" align="right"></a>
-                <p>
-                    JSXC to the rescue: Just add a few simple lines to your web site or web application,
-                    and your users can immediately communicate over your organisation's XMPP server.
-                    Providing the most commonly used XMPP client functionality in an easy package, JSXC
-                    will improve collaboration among your employees, simplify communications, and get
-                    questions answered quicker.
-                </p>
+                <h2>ownCloud Integration</h2>
 				<a href="images/owncloud-screenshot.png"><img src="images/owncloud-screenshot-thumb.png" alt="Screenshot ownCloud" align="right"></a>
-                <p>JSXC is a first implementation of the <a href="faq.html#wisechat">WISEchat</a> paradigm.
+                <p><a href="http://owncloud.org">ownCloud</a> already provides self-hosted storage and sharing of
+                files, contacts, calendars, and much more. Collaborating on documents frequently requires coordination.
+                This is where JSXC (in the shape of the
+                <a href="http://apps.owncloud.com/content/show.php/JavaScript+XMPP+Chat?content=162257">ojsxc app for ownCloud</a>)
+                caters for your needs.
+                </p>
+                <p>Besides the <a href="features.html">standard features of JSXC</a>, the ownCloud integration adds:
+                </p>
+                <ul>
+                    <li>Unified login: Logging into ownCloud also logs you in to JSXC/XMPP</li>
+                    <li>Configuration from within ownCloud's administrative interface</li>
+                </ul>
+
+                <h2>SOGo Integration</h2>
+                <a href="images/SOGo-screenshot.png"><img src="images/SOGo-screenshot-thumb.png" alt="Screenshot SOGo" align="right"></a>
+                <p><a href="http://sogo.nu">Scalable Open Groupware, SOGo</a> combines a Thunderbird-lookalike web interface for email browsing with
+                enterprise-quality CalDAV/CardDAV calendaring and address books. JSXC not only shares web browser real estate with SOGo, but
+                actually augments it. Having received an email, you can immediately call back via instant messaging or XMPP-based
+                VoIP audio/video call, if you require additional information or if the matter is better settled face-to-face.
+                The <a href="features.html">standard features of JSXC</a> are extended by:
+                </p>
+                <ul>
+                    <li>Unified login: Logging into SOGo also logs you in to JSXC/XMPP</li>
+                    <li>JSXC recognizes XMPP IDs (Jabber ID, JID) in the SOGo content (address books, emails, …)</li>
+                    <li>JIDs in  and enhances them with presence
+                        information (the colored bullets in the screen shot's magnifying glass).</li>
+                </ul>
+
+                <h2>Other Integration</h2>
+                <a href="images/rz-screenshot.png"><img src="images/rz-screenshot-thumb.png" alt="Screenshot RZ" align="right"></a>
+                <p>JSXC can be integrated in other web pages as well. If you want to add comfort features such as unified login, configuration, or JID detection, you need to add specific code to do this (don't worry, we're working on a how-to description). On the right, you can see an integration into the <a href="http://www.uni-konstanz.de">University's</a> <a href="http://typo3.org">Typo3</a> Web Content Management System.
                 </p>
 
-				<h2>
-					<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a> <a name="features" href="#features"></a>Main Features
-				</h2>
-
-				<ul>
-					<li>Full-featured <b>XMPP client</b> in the browser, no client installation required</li>
-					<li>Easy <b>integration</b> into your existing web page or application</li>
-                    <li><b>Interaction</b> with your web page, e.g. making Jabber IDs active</li>
-                    <li><b>Uninterrupted browsing</b> among JSXC-enhanced pages</li>
-                    <li>One-to-one chats, optionally with <b>end-to-end encryption</b> (<a href="faq.html#otr">OTR</a>)
-                        and user verification (<a href="faq.html#smp">SMP</a>)</li>
-                    <li>End-to-end encrypted <b>audio and video calls</b> from Firefox and Chrome without plugin</li>
-                    <li>A growing number of <b>international</b> languages supported</li>
-                    <li>Event <b>notifications</b> with sound if browser/tab inactive <small>(not yet supported in Internet Explorer)</small></li>
-				</ul>
-                <a href="features.html">Full list of features</a>
 			</section>
 
 			<nav id="mainnav">
