@@ -431,6 +431,7 @@ footer a:hover {
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .inner {
     width: 740px;
+    background-position: 510px 0px !important;
   }
   header h1, header h2 {
     width: 340px;
