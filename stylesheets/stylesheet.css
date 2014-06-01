@@ -531,7 +531,7 @@ a[href^="mailto:"], a[href^="xmpp:"] {
     height: 1em;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 1em 1em;
+    background-size: 0.95em auto;
 }
 a[href^="mailto:"] {
     background-image: url('../images/mail.svg');
