@@ -1,214 +1,143 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset='utf-8'>
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+---
+layout: default
+title: Manual
+---
+<h1>User Manual</h1>
 
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<ol>
+    <li><a href="#login">First Login</a></li>
+    <li><a href="#roster">Roster Management</a></li>
+    <ul>
+        <li><a href="#add">Adding a Contact</a></li>
+        <li><a href="#modify">Modifying a Contact</a></li>
+        <li><a href="#delete">Deleting a Contact</a></li>
+    </ul>
+    <li><a href="#notifications">Notifications</a></li>
+    <li><a href="#status">Setting Your Status</a></li>
+    <li><a href="#chat">Chatting</a></li>
+    <ul>
+        <li><a href="#secure">Activating Encryption</a></li>
+        <li><a href="#av">Audio/Video Chat</a></li>
+    </ul>
+</ol>
 
-<title>JSXC: JavaScript XMPP Client – User Manual</title>
-</head>
+<h2 class="clear"><a name="login" class="anchor" href="#login"><span class="octicon octicon-link"></span></a>1. First Login
+    <a href="images/manual-login.jpeg"><img src="images/manual-login-thumb.jpeg" alt="Screenshot login" align="right"></a></h2>
+<p>
+For this section, we assume that you are using JSXC with unified login, i.e., logging in to your web application such as SOGo or ownCloud will also log you into your JSXC XMPP Chat.
+</p>
+<p>
+After entering username and password as usual, a new <b>dialog "Logging in"</b> will appear, until both JSXC and the web application have logged in. Errors during the XMPP login will be shown in this dialog, while main application login errors will be communicated as they have always been.
+</p>
+<a href="images/manual-keygen.jpeg"><img src="images/manual-keygen-thumb.jpeg" alt="Screenshot key generation" align="right"></a>
+<p>
+After successful login, the right hand side of your application will show the JSXC bar. During the first login with a browser, the JSXC bar will display that it is creating your security key. After a short while, the display will change to your roster. Already during key generation, you can use the main application as before. JSXC functions will only be available after <b>key generation</b> finishes. The key is stored in your browser and not sent to any server.
+</p>
+<p>
+If you would like to use more screen real estate for your application, you can resize or <b>hide</b> the JSXC bar by clicking on the vertical dividing line to the main application. It can be restored by clicking on the right edge of the window. Your web browser will remember the bar visibility.
+</p>
 
-<body>
-	<header>
-		<div class="inner">
-			<h1>JSXC: Manual</h1>
-			<h2>JavaScript XMPP Chat</h2>
-			<a href="https://github.com/sualko/jsxc" class="button"><small>View project on</small>GitHub</a>
-		</div>
-	</header>
+<h2 class="clear"><a name="roster" class="anchor" href="#roster"><span class="octicon octicon-link"></span></a>2. Roster Management
+    <a href="images/manual-roster.jpeg"><img src="images/manual-roster-thumb.jpeg" alt="Screenshot key generation" align="right"></a>
+</h2>
+<p>
+If you have previously used XMPP for that account, e.g., from another JSXC-enabled application or a native XMPP/Jabber client, your roster, the list appearing in the JSXC bar after the login, will already be populated with the contacts. As with all XMPP clients, the roster is stored on the XMPP server, so your contact list will be available to any XMPP client, including JSXC.
+</p>
 
-	<div id="content-wrapper">
-		<div class="inner clearfix">
-			<section id="main-content">
-                <h1>User Manual</h1>
+<h3 class="clear"><a name="add" class="anchor" href="#"><span class="octicon octicon-link"></span></a>Adding a Contact
+    <a href="images/manual-add1.jpeg"><img src="images/manual-add1-thumb.jpeg" alt="Screenshot contact addition" align="right"></a>
+</h3>
+<p>
+To add a contact, click on the <b>gear icon</b> at the bottom right corner and select <b>Add Buddy</b>; then enter the JID (typically the email address) of your buddy, optionally with a (nick) name under which the buddy should be shown in your roster. This name is only visible to you; if no full name is given, then the JID will be displayed.
+</p>
+<a href="images/manual-add2.jpeg"><img src="images/manual-add2-thumb.jpeg" alt="Screenshot contact addition" align="right"></a>
+<p>
+The person you just added will receive a <a href="#notifications">friendship notification</a> in their chat client. If they are offline, this request will wait for them to go online.
+</p>
+<p>
+Once you have a lot of contacts and only want to see those who are online, you can select <b>Hide Offline</b> from the <b>gear icon</b> menu.
+</p>
 
-                <ol>
-                    <li><a href="#login">First Login</a></li>
-                    <li><a href="#roster">Roster Management</a></li>
-                    <ul>
-                        <li><a href="#add">Adding a Contact</a></li>
-                        <li><a href="#modify">Modifying a Contact</a></li>
-                        <li><a href="#delete">Deleting a Contact</a></li>
-                    </ul>
-                    <li><a href="#notifications">Notifications</a></li>
-                    <li><a href="#status">Setting Your Status</a></li>
-                    <li><a href="#chat">Chatting</a></li>
-                    <ul>
-                        <li><a href="#secure">Activating Encryption</a></li>
-                        <li><a href="#av">Audio/Video Chat</a></li>
-                    </ul>
-                </ol>
+<h3><a name="modify" class="anchor" href="#"><span class="octicon octicon-link"></span></a>Modifying a Contact
+</h3>
+<p>
+When hovering the mouse over a contact, two icons will float in from the right: A pen to edit the name, and a cross to <a href="#delete">delete</a> it. Clicking on the pen icon will make the name editable. Hitting return will change the entry in your roster. The name you entered will be active on all your XMPP clients connecting to this account. Other users, including the contact, will not know what you have entered there.
+</p>
+<a href="images/manual-modify1.jpeg"><img src="images/manual-modify1-thumb.jpeg" alt="Screenshot contact modification" align="right"></a>
+<p>
+If you empty the nickname, the JID will be displayed. This can also be helpful if you played around with nicknames so much that you confused yourself.
+</p>
 
-                <h2 class="clear"><a name="login" class="anchor" href="#login"><span class="octicon octicon-link"></span></a>1. First Login
-                <a href="images/manual-login.jpeg"><img src="images/manual-login-thumb.jpeg" alt="Screenshot login" align="right"></a></h2>
-                <p>
-                    For this section, we assume that you are using JSXC with unified login, i.e., logging in to your web application such as SOGo or ownCloud will also log you into your JSXC XMPP Chat.
-                </p>
-                <p>
-                    After entering username and password as usual, a new <b>dialog "Logging in"</b> will appear, until both JSXC and the web application have logged in. Errors during the XMPP login will be shown in this dialog, while main application login errors will be communicated as they have always been.
-                </p>
-				<a href="images/manual-keygen.jpeg"><img src="images/manual-keygen-thumb.jpeg" alt="Screenshot key generation" align="right"></a>
-                <p>
-                    After successful login, the right hand side of your application will show the JSXC bar. During the first login with a browser, the JSXC bar will display that it is creating your security key. After a short while, the display will change to your roster. Already during key generation, you can use the main application as before. JSXC functions will only be available after <b>key generation</b> finishes. The key is stored in your browser and not sent to any server.
-                </p>
-                <p>
-                    If you would like to use more screen real estate for your application, you can resize or <b>hide</b> the JSXC bar by clicking on the vertical dividing line to the main application. It can be restored by clicking on the right edge of the window. Your web browser will remember the bar visibility.
-                </p>
+<h3><a name="delete" class="anchor" href="#"><span class="octicon octicon-link"></span></a>Deleting a Contact</h3>
+<p>
+When hovering the mouse over a contact, two icons will float in from the right: A pen to <a href="#modify">edit</a> the name, and a cross to delete it. Clicking on the cross icon will delete the contact from your roster and will revoke their right of seeing your online status.
+</p>
 
-                <h2 class="clear"><a name="roster" class="anchor" href="#roster"><span class="octicon octicon-link"></span></a>2. Roster Management
-				<a href="images/manual-roster.jpeg"><img src="images/manual-roster-thumb.jpeg" alt="Screenshot key generation" align="right"></a>
-                </h2>
-                <p>
-                    If you have previously used XMPP for that account, e.g., from another JSXC-enabled application or a native XMPP/Jabber client, your roster, the list appearing in the JSXC bar after the login, will already be populated with the contacts. As with all XMPP clients, the roster is stored on the XMPP server, so your contact list will be available to any XMPP client, including JSXC.
-                </p>
+<h2 class="clear"><a name="notifications" class="anchor" href="#notifications"><span class="octicon octicon-link"></span></a>3. Notifications
+    <a href="images/manual-subreq.jpeg"><img src="images/manual-subreq-thumb.jpeg" alt="Screenshot subscription request" align="right"></a>
+</h2>
+<p>
+In a chat, several events can happen. For example, someone may <a href="#add">add you to their roster</a> and would like to your presence status and thus be able to see whether you are online. Such events are listed at the bottom right with the pending event count on yellow background. Clicking on it reveals the requests, which you can then handle, e.g., deny or accept the friendship request.
+</p>
+<a href="images/manual-notify1.jpeg"><img src="images/manual-notify1-thumb.jpeg" alt="Screenshot notification request" align="right"></a>
+<p>
+When your chat tab or window is not active, most modern browsers offer the ability to notify you through the operating system's notification facility, often a message appearing in one of the screen corners. This allows you to continue your work while being able to immediately respond to incoming requests or messages.
+</p>
+<a href="images/manual-notify2.jpeg"><img src="images/manual-notify2-thumb.jpeg" alt="Screenshot notification request" align="right"></a>
+<p>To prevent abuse, web pages by default do not have the right to pop up notification messages. On the first message JSXC receives while inactive, it will therefore ask you whether it should notify you about background activity at all. If you want this to be enabled, the browser wants you to confirm this.
+</p>
+<a href="images/manual-notbox.jpeg"><img src="images/manual-notbox-thumb.jpeg" alt="Screenshot notification" align="right"></a>
 
-                <h3 class="clear"><a name="add" class="anchor" href="#"><span class="octicon octicon-link"></span></a>Adding a Contact
-				<a href="images/manual-add1.jpeg"><img src="images/manual-add1-thumb.jpeg" alt="Screenshot contact addition" align="right"></a>
-                </h3>
-                <p>
-                    To add a contact, click on the <b>gear icon</b> at the bottom right corner and select <b>Add Buddy</b>; then enter the JID (typically the email address) of your buddy, optionally with a (nick) name under which the buddy should be shown in your roster. This name is only visible to you; if no full name is given, then the JID will be displayed.
-                </p>
-				<a href="images/manual-add2.jpeg"><img src="images/manual-add2-thumb.jpeg" alt="Screenshot contact addition" align="right"></a>
-                <p>
-                    The person you just added will receive a <a href="#notifications">friendship notification</a> in their chat client. If they are offline, this request will wait for them to go online.
-                </p>
-                <p>
-                    Once you have a lot of contacts and only want to see those who are online, you can select <b>Hide Offline</b> from the <b>gear icon</b> menu.
-                </p>
+<h2 class="clear"><a name="status" class="anchor" href="#status"><span class="octicon octicon-link"></span></a>4. Setting Your Status
+    <a href="images/manual-status.jpeg"><img src="images/manual-status-thumb.jpeg" alt="Screenshot notification request" align="right"></a>
+</h2>
+<p>
+You can tell your contacts whether you are available, e.g. by setting the status to <b>away</b> or <b>do not disturb</b>. Your contacts will see this by the colored bar left of their roster entry for you which will change to yellow or red as a result of this.
+</p>
 
-                <h3><a name="modify" class="anchor" href="#"><span class="octicon octicon-link"></span></a>Modifying a Contact
-                </h3>
-                <p>
-                    When hovering the mouse over a contact, two icons will float in from the right: A pen to edit the name, and a cross to <a href="#delete">delete</a> it. Clicking on the pen icon will make the name editable. Hitting return will change the entry in your roster. The name you entered will be active on all your XMPP clients connecting to this account. Other users, including the contact, will not know what you have entered there.
-                </p>
-				<a href="images/manual-modify1.jpeg"><img src="images/manual-modify1-thumb.jpeg" alt="Screenshot contact modification" align="right"></a>
-                <p>
-                    If you empty the nickname, the JID will be displayed. This can also be helpful if you played around with nicknames so much that you confused yourself.
-                </p>
+<h2 class="clear"><a name="chat" class="anchor" href="#chat"><span class="octicon octicon-link"></span></a>5. Chatting
+    <a href="images/manual-chat.jpeg"><img src="images/manual-chat-thumb.jpeg" alt="Screenshot chat window" align="right"></a>
+</h2>
+<p>
+Finally! You know your way around JSXC and can start to chat with your friends or coworkers! Just click on one of your contacts and a chat window will open. Click on another contact, and – yes, a second chat window will open. If they are using up too much screen real estate, click at the bottom of a chat window to <b>minimize</b> it or on the X on the top right to close it. The bottom bar of a chat window will flash even when minimized.
+</p>
+<a href="images/manual-mini.jpeg"><img src="images/manual-mini-thumb.jpeg" alt="Screenshot minimized chat window" align="right"></a>
+<p>
+Reopening a chat window will restore the chat history. The <b>chat history</b> is only saved in your browser and can be <b>deleted</b> using the gear icon in the chat window.
+</p>
+<p>
+The actual chat process is straightforward: Type into the <b>…Message</b> input field and hit return; answers will appear in the chat window.
+</p>
 
-                <h3><a name="delete" class="anchor" href="#"><span class="octicon octicon-link"></span></a>Deleting a Contact</h3>
-                <p>
-                    When hovering the mouse over a contact, two icons will float in from the right: A pen to <a href="#modify">edit</a> the name, and a cross to delete it. Clicking on the cross icon will delete the contact from your roster and will revoke their right of seeing your online status.
-                </p>
+<h3 class="clear"><a name="secure" class="anchor" href="#secure"><span class="octicon octicon-link"></span></a>Activating Encryption
+    <a href="images/manual-padlock.jpeg"><img src="images/manual-padlock-thumb.jpeg" alt="Screenshot padlock" align="right"></a>
+</h3>
+<p>
+If your XMPP server is configured correctly, all communication between JSXC and the XMPP server is encrypted. However, if you have contacts on other servers, the communication between those two servers may not always be. Even though every day, encryption is activated on more servers, e.g., communication with Google Talk servers is guaranteed to go over the network unencrypted.
+</p>
+<a href="images/manual-authenticate.jpeg"><img src="images/manual-authenticate-tiny.jpeg" alt="Screenshot authentication menu" align="right"></a>
+<p>
+You are not sure about your system configuration, have something sensitive to discuss, or just want an extra layer of security and privacy? End-to-end encryption of your messages can be added by clicking on the <b>padlock icon</b>. On the first use, the padlock will turn <b>orange</b> to indicate that your messages are being sent encrypted.
+</p>
+<p>
+To ensure that the messages are actually encrypted to the correct person, you should <b>authenticate</b> your contact. Using the chat window's gear menu at the top left, you can start authentication.
+</p>
+<a href="images/manual-authchoice.jpeg"><img src="images/manual-authchoice-thumb.jpeg" alt="Screenshot authentication choices" align="right"></a>
+<p>
+Authentication comes in three flavors:
+</p>
+<ol>
+    <li>Manually verifying the fingerprint of both parties' keys</li>
+    <li>Providing a question to which only your contact knows the answer</li>
+    <li>Entering a secret you agreed on offline</li>
+</ol>
+<p>
+Once authentication has successfully completed, the padlock will turn green, stating that the messages exchanged between the two of you are end-to-end encrypted with nobody eavesdropping in between.
+</p>
 
-                <h2 class="clear"><a name="notifications" class="anchor" href="#notifications"><span class="octicon octicon-link"></span></a>3. Notifications
-				<a href="images/manual-subreq.jpeg"><img src="images/manual-subreq-thumb.jpeg" alt="Screenshot subscription request" align="right"></a>
-                </h2>
-                <p>
-                    In a chat, several events can happen. For example, someone may <a href="#add">add you to their roster</a> and would like to your presence status and thus be able to see whether you are online. Such events are listed at the bottom right with the pending event count on yellow background. Clicking on it reveals the requests, which you can then handle, e.g., deny or accept the friendship request.
-                </p>
-				<a href="images/manual-notify1.jpeg"><img src="images/manual-notify1-thumb.jpeg" alt="Screenshot notification request" align="right"></a>
-                <p>
-                    When your chat tab or window is not active, most modern browsers offer the ability to notify you through the operating system's notification facility, often a message appearing in one of the screen corners. This allows you to continue your work while being able to immediately respond to incoming requests or messages.
-                </p>
-				<a href="images/manual-notify2.jpeg"><img src="images/manual-notify2-thumb.jpeg" alt="Screenshot notification request" align="right"></a>
-                <p>To prevent abuse, web pages by default do not have the right to pop up notification messages. On the first message JSXC receives while inactive, it will therefore ask you whether it should notify you about background activity at all. If you want this to be enabled, the browser wants you to confirm this.
-                </p>
-				<a href="images/manual-notbox.jpeg"><img src="images/manual-notbox-thumb.jpeg" alt="Screenshot notification" align="right"></a>
-
-                <h2 class="clear"><a name="status" class="anchor" href="#status"><span class="octicon octicon-link"></span></a>4. Setting Your Status
-				<a href="images/manual-status.jpeg"><img src="images/manual-status-thumb.jpeg" alt="Screenshot notification request" align="right"></a>
-                </h2>
-                <p>
-                    You can tell your contacts whether you are available, e.g. by setting the status to <b>away</b> or <b>do not disturb</b>. Your contacts will see this by the colored bar left of their roster entry for you which will change to yellow or red as a result of this.
-                </p>
-
-                <h2 class="clear"><a name="chat" class="anchor" href="#chat"><span class="octicon octicon-link"></span></a>5. Chatting
-				<a href="images/manual-chat.jpeg"><img src="images/manual-chat-thumb.jpeg" alt="Screenshot chat window" align="right"></a>
-                </h2>
-                <p>
-                    Finally! You know your way around JSXC and can start to chat with your friends or coworkers! Just click on one of your contacts and a chat window will open. Click on another contact, and – yes, a second chat window will open. If they are using up too much screen real estate, click at the bottom of a chat window to <b>minimize</b> it or on the X on the top right to close it. The bottom bar of a chat window will flash even when minimized.
-                </p>
-				<a href="images/manual-mini.jpeg"><img src="images/manual-mini-thumb.jpeg" alt="Screenshot minimized chat window" align="right"></a>
-                <p>
-                    Reopening a chat window will restore the chat history. The <b>chat history</b> is only saved in your browser and can be <b>deleted</b> using the gear icon in the chat window.
-                </p>
-                <p>
-                    The actual chat process is straightforward: Type into the <b>…Message</b> input field and hit return; answers will appear in the chat window.
-                </p>
-
-                <h3 class="clear"><a name="secure" class="anchor" href="#secure"><span class="octicon octicon-link"></span></a>Activating Encryption
-				<a href="images/manual-padlock.jpeg"><img src="images/manual-padlock-thumb.jpeg" alt="Screenshot padlock" align="right"></a>
-                </h3>
-                <p>
-                    If your XMPP server is configured correctly, all communication between JSXC and the XMPP server is encrypted. However, if you have contacts on other servers, the communication between those two servers may not always be. Even though every day, encryption is activated on more servers, e.g., communication with Google Talk servers is guaranteed to go over the network unencrypted.
-                </p>
-				<a href="images/manual-authenticate.jpeg"><img src="images/manual-authenticate-tiny.jpeg" alt="Screenshot authentication menu" align="right"></a>
-                <p>
-                    You are not sure about your system configuration, have something sensitive to discuss, or just want an extra layer of security and privacy? End-to-end encryption of your messages can be added by clicking on the <b>padlock icon</b>. On the first use, the padlock will turn <b>orange</b> to indicate that your messages are being sent encrypted.
-                </p>
-                <p>
-                    To ensure that the messages are actually encrypted to the correct person, you should <b>authenticate</b> your contact. Using the chat window's gear menu at the top left, you can start authentication.
-                </p>
-				<a href="images/manual-authchoice.jpeg"><img src="images/manual-authchoice-thumb.jpeg" alt="Screenshot authentication choices" align="right"></a>
-                <p>
-                    Authentication comes in three flavors:
-                </p>
-                <ol>
-                    <li>Manually verifying the fingerprint of both parties' keys</li>
-                    <li>Providing a question to which only your contact knows the answer</li>
-                    <li>Entering a secret you agreed on offline</li>
-                </ol>
-                <p>
-                    Once authentication has successfully completed, the padlock will turn green, stating that the messages exchanged between the two of you are end-to-end encrypted with nobody eavesdropping in between.
-                </p>
-
-                <h3 class="clear"><a name="av" class="anchor" href="#av"><span class="octicon octicon-link"></span></a>Audio/Video Chat
-				<a href="images/manual-camera.jpeg"><img src="images/manual-camera-thumb.jpeg" alt="Screenshot start video chat" align="right"></a>
-                </h3>
-                <p>
-                    To start a video chat, click on the camera icon (right of the padlock). A end-to-end encrypted audio and video connection, secured by SRTP, will then be set up to your chat peer. To protect your privacy, the web browser will require confirmation before allowing JSXC access to your camera and microphone. Enjoy!
-                </p>
-
-
-			</section>
-
-			<nav id="mainnav">
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="features.html">Features</a></li>
-					<li><a href="examples.html">Examples</a></li>
-					<li><a href="installation.html">Installation</a></li>
-					<li><a href="manual.html">User Manual</a></li>
-					<li><a href="faq.html">FAQ</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
-
-			<aside id="sidebar">
-				<a href="https://github.com/sualko/jsxc/releases" class="button"> <small>Download</small> JSXC Core</a>
-                <a href="https://github.com/sualko/ojsxc/releases" class="button"> <small>Download JSXC for</small> ownCloud</a>
-                <a href="https://github.com/sualko/sjsxc/releases" class="button"> <small>Download JSXC for</small> SOGo</a>
-				<p>
-					This page is derived from the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-				</p>
-			</aside>
-		</div>
-	</div>
-
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://track.webstudio-bodensee.de/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 8]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="http://track.webstudio-bodensee.de/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
-
-</body>
-</html>
+<h3 class="clear"><a name="av" class="anchor" href="#av"><span class="octicon octicon-link"></span></a>Audio/Video Chat
+    <a href="images/manual-camera.jpeg"><img src="images/manual-camera-thumb.jpeg" alt="Screenshot start video chat" align="right"></a>
+</h3>
+<p>
+To start a video chat, click on the camera icon (right of the padlock). A end-to-end encrypted audio and video connection, secured by SRTP, will then be set up to your chat peer. To protect your privacy, the web browser will require confirmation before allowing JSXC access to your camera and microphone. Enjoy!
+</p>

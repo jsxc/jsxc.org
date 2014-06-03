@@ -1,110 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset='utf-8'>
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+---
+layout: default
+title: Examples
+---
+<h1>Usage Examples</h1>
 
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<h2>ownCloud Integration</h2>
+<a href="images/owncloud-screenshot.png"><img src="images/owncloud-screenshot-thumb.png" alt="Screenshot ownCloud" align="right"></a>
+<p><a href="http://owncloud.org">ownCloud</a> already provides self-hosted storage and sharing of
+files, contacts, calendars, and much more. Collaborating on documents frequently requires coordination.
+This is where JSXC (in the shape of the <a href="http://apps.owncloud.com/content/show.php/JavaScript+XMPP+Chat?content=162257">ojsxc app for ownCloud</a>) caters for your needs.</p>
 
-<title>JSXC: JavaScript XMPP Client – Examples</title>
-</head>
+<p>Besides the <a href="features.html">standard features of JSXC</a>, the ownCloud integration adds:</p>
+<ul>
+    <li>Unified login: Logging into ownCloud also logs you in to JSXC/XMPP</li>
+    <li>Configuration from within ownCloud's administrative interface</li>
+</ul>
 
-<body>
-	<header>
-		<div class="inner">
-			<h1>JSXC: Examples</h1>
-			<h2>JavaScript XMPP Chat</h2>
-			<a href="https://github.com/sualko/jsxc" class="button"><small>View project on</small>GitHub</a>
-		</div>
-	</header>
+<h2>SOGo Integration</h2>
+<a href="images/SOGo-screenshot.png"><img src="images/SOGo-screenshot-thumb.png" alt="Screenshot SOGo" align="right"></a>
+<p><a href="http://sogo.nu">Scalable Open Groupware, SOGo</a> combines a Thunderbird-lookalike web interface for email browsing with enterprise-quality CalDAV/CardDAV calendaring and address books. JSXC not only shares web browser real estate with SOGo, but actually augments it. Having received an email, you can immediately call back via instant messaging or XMPP-based VoIP audio/video call, if you require additional information or if the matter is better settled face-to-face.
 
-	<div id="content-wrapper">
-		<div class="inner clearfix">
-			<section id="main-content">
-                <h1>Usage Examples</h1>
+The <a href="features.html">standard features of JSXC</a> are extended by:</p>
 
-                <h2>ownCloud Integration</h2>
-				<a href="images/owncloud-screenshot.png"><img src="images/owncloud-screenshot-thumb.png" alt="Screenshot ownCloud" align="right"></a>
-                <p><a href="http://owncloud.org">ownCloud</a> already provides self-hosted storage and sharing of
-                files, contacts, calendars, and much more. Collaborating on documents frequently requires coordination.
-                This is where JSXC (in the shape of the
-                <a href="http://apps.owncloud.com/content/show.php/JavaScript+XMPP+Chat?content=162257">ojsxc app for ownCloud</a>)
-                caters for your needs.
-                </p>
-                <p>Besides the <a href="features.html">standard features of JSXC</a>, the ownCloud integration adds:
-                </p>
-                <ul>
-                    <li>Unified login: Logging into ownCloud also logs you in to JSXC/XMPP</li>
-                    <li>Configuration from within ownCloud's administrative interface</li>
-                </ul>
+<ul>
+    <li>Unified login: Logging into SOGo also logs you in to JSXC/XMPP</li>
+    <li>JSXC recognizes XMPP IDs (Jabber ID, JID) in the SOGo content (address books, emails, …)</li>
+    <li>JIDs in  and enhances them with presence
+    information (the colored bullets in the screen shot's magnifying glass).</li>
+</ul>
 
-                <h2>SOGo Integration</h2>
-                <a href="images/SOGo-screenshot.png"><img src="images/SOGo-screenshot-thumb.png" alt="Screenshot SOGo" align="right"></a>
-                <p><a href="http://sogo.nu">Scalable Open Groupware, SOGo</a> combines a Thunderbird-lookalike web interface for email browsing with
-                enterprise-quality CalDAV/CardDAV calendaring and address books. JSXC not only shares web browser real estate with SOGo, but
-                actually augments it. Having received an email, you can immediately call back via instant messaging or XMPP-based
-                VoIP audio/video call, if you require additional information or if the matter is better settled face-to-face.
-                The <a href="features.html">standard features of JSXC</a> are extended by:
-                </p>
-                <ul>
-                    <li>Unified login: Logging into SOGo also logs you in to JSXC/XMPP</li>
-                    <li>JSXC recognizes XMPP IDs (Jabber ID, JID) in the SOGo content (address books, emails, …)</li>
-                    <li>JIDs in  and enhances them with presence
-                        information (the colored bullets in the screen shot's magnifying glass).</li>
-                </ul>
-
-                <h2>Other Integration</h2>
-                <a href="images/rz-screenshot.png"><img src="images/rz-screenshot-thumb.png" alt="Screenshot RZ" align="right"></a>
-                <p>JSXC can be integrated in other web pages as well. If you want to add comfort features such as unified login, configuration, or JID detection, you need to add specific code to do this (don't worry, we're working on a how-to description). On the right, you can see an integration into the <a href="http://www.uni-konstanz.de">University's</a> <a href="http://typo3.org">Typo3</a> Web Content Management System.
-                </p>
-
-			</section>
-
-			<nav id="mainnav">
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="features.html">Features</a></li>
-					<li><a href="examples.html">Examples</a></li>
-					<li><a href="installation.html">Installation</a></li>
-					<li><a href="manual.html">User Manual</a></li>
-					<li><a href="faq.html">FAQ</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
-
-			<aside id="sidebar">
-				<a href="https://github.com/sualko/jsxc/releases" class="button"> <small>Download</small> JSXC Core</a>
-                <a href="https://github.com/sualko/ojsxc/releases" class="button"> <small>Download JSXC for</small> ownCloud</a>
-                <a href="https://github.com/sualko/sjsxc/releases" class="button"> <small>Download JSXC for</small> SOGo</a>
-				<p>
-					This page is derived from the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-				</p>
-			</aside>
-		</div>
-	</div>
-
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://track.webstudio-bodensee.de/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 8]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="http://track.webstudio-bodensee.de/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
-
-</body>
-</html>
+<h2>Other Integration</h2>
+<a href="images/rz-screenshot.png"><img src="images/rz-screenshot-thumb.png" alt="Screenshot RZ" align="right"></a>
+<p>JSXC can be integrated in other web pages as well. If you want to add comfort features such as unified login, configuration, or JID detection, you need to add specific code to do this (don't worry, we're working on a how-to description). On the right, you can see an integration into the <a href="http://www.uni-konstanz.de">University's</a> <a href="http://typo3.org">Typo3</a> Web Content Management System.
+</p>

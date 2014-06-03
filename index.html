@@ -1,113 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset='utf-8'>
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+--- 
+layout: default 
+---
 
-<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+<a href="images/SOGo-screenshot.png"><img src="images/SOGo-screenshot-thumb.png" alt="Screenshot SOGo" align="right"></a>
+<h2>
+	<a name="jsxc---core" class="anchor" href="#jsxc---core"><span class="octicon octicon-link"></span></a> <a name="javascript-xmpp-client" href="#javascript-xmpp-client"></a>Add real-time XMPP chat to any web application!
+</h2>
 
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<p>
+	Communication should be immediate, secure, private, and without hurdles. The <a href="http://xmpp.org/">Extensible Messaging and Presence Protocol (XMPP)</a> already provides the first three. But in today's world, most users will be in the browser, so even the most basic application installation can be a major hurdle.
+</p>
+<a href="images/rz-screenshot.png"><img src="images/rz-screenshot-thumb.png" alt="Screenshot RZ" align="right"></a>
+<p>JSXC to the rescue: Just add a few simple lines to your web site or web application, and your users can immediately communicate over your organisation's XMPP server. Providing the most commonly used XMPP client functionality in an easy package, JSXC will improve collaboration among your employees, simplify communications, and get questions answered quicker.</p>
+<a href="images/owncloud-screenshot.png"><img src="images/owncloud-screenshot-thumb.png" alt="Screenshot ownCloud" align="right"></a>
+<p>
+	JSXC is a first implementation of the <a href="faq.html#wisechat">WISEchat</a> paradigm.
+</p>
 
-<title>JSXC: JavaScript XMPP Client</title>
-</head>
+<h2>
+	<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a> <a name="features" href="#features"></a>Main Features
+</h2>
 
-<body>
-	<header>
-		<div class="inner">
-			<h1>JSXC</h1>
-			<h2>JavaScript XMPP Chat</h2>
-			<a href="https://github.com/sualko/jsxc" class="button"><small>View project on</small>GitHub</a>
-		</div>
-	</header>
-
-	<div id="content-wrapper">
-		<div class="inner clearfix">
-			<section id="main-content">
-                <a href="images/SOGo-screenshot.png"><img src="images/SOGo-screenshot-thumb.png" alt="Screenshot SOGo" align="right"></a>
-				<h2>
-					<a name="jsxc---core" class="anchor" href="#jsxc---core"><span class="octicon octicon-link"></span></a>
-                    <a name="javascript-xmpp-client" href="#javascript-xmpp-client"></a>Add real-time XMPP chat to any web application!
-				</h2>
-
-                <p>
-                    Communication should be immediate, secure, private, and without hurdles.
-                    The <a href="http://xmpp.org/">Extensible Messaging and Presence Protocol (XMPP)</a>
-                    already provides the first three. But in today's world, most users will be in the browser,
-                    so even the most basic application installation can be a major hurdle.
-                </p>
-                <a href="images/rz-screenshot.png"><img src="images/rz-screenshot-thumb.png" alt="Screenshot RZ" align="right"></a>
-                <p>
-                    JSXC to the rescue: Just add a few simple lines to your web site or web application,
-                    and your users can immediately communicate over your organisation's XMPP server.
-                    Providing the most commonly used XMPP client functionality in an easy package, JSXC
-                    will improve collaboration among your employees, simplify communications, and get
-                    questions answered quicker.
-                </p>
-				<a href="images/owncloud-screenshot.png"><img src="images/owncloud-screenshot-thumb.png" alt="Screenshot ownCloud" align="right"></a>
-                <p>JSXC is a first implementation of the <a href="faq.html#wisechat">WISEchat</a> paradigm.
-                </p>
-
-				<h2>
-					<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a> <a name="features" href="#features"></a>Main Features
-				</h2>
-
-				<ul>
-					<li>Full-featured <b>XMPP client</b> in the browser, no client installation required</li>
-					<li>Easy <b>integration</b> into your existing web page or application</li>
-                    <li><b>Interaction</b> with your web page, e.g. making Jabber IDs active</li>
-                    <li><b>Uninterrupted browsing</b> among JSXC-enhanced pages</li>
-                    <li>One-to-one chats, optionally with <b>end-to-end encryption</b> (<a href="faq.html#otr">OTR</a>)
-                        and user verification (<a href="faq.html#smp">SMP</a>)</li>
-                    <li>End-to-end encrypted <b>audio and video calls</b> from Firefox and Chrome without plugin</li>
-                    <li>A growing number of <b>international</b> languages supported</li>
-                    <li>Event <b>notifications</b> with sound if browser/tab inactive <small>(not yet supported in Internet Explorer)</small></li>
-				</ul>
-                <a href="features.html">Full list of features</a>
-			</section>
-
-			<nav id="mainnav">
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="features.html">Features</a></li>
-					<li><a href="examples.html">Examples</a></li>
-					<li><a href="installation.html">Installation</a></li>
-					<li><a href="manual.html">User Manual</a></li>
-					<li><a href="faq.html">FAQ</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
-
-			<aside id="sidebar">
-				<a href="https://github.com/sualko/jsxc/releases" class="button"> <small>Download</small> JSXC Core</a>
-                <a href="https://github.com/sualko/ojsxc/releases" class="button"> <small>Download JSXC for</small> ownCloud</a>
-                <a href="https://github.com/sualko/sjsxc/releases" class="button"> <small>Download JSXC for</small> SOGo</a>
-				<p>
-					This page is derived from the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-				</p>
-			</aside>
-		</div>
-	</div>
-
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://track.webstudio-bodensee.de/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 8]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="http://track.webstudio-bodensee.de/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code -->
-
-</body>
-</html>
+<ul>
+	<li>Full-featured <b>XMPP client</b> in the browser, no client installation required
+	</li>
+	<li>Easy <b>integration</b> into your existing web page or application
+	</li>
+	<li><b>Interaction</b> with your web page, e.g. making Jabber IDs active</li>
+	<li><b>Uninterrupted browsing</b> among JSXC-enhanced pages</li>
+	<li>One-to-one chats, optionally with <b>end-to-end encryption</b> (<a href="faq.html#otr">OTR</a>) and user verification (<a href="faq.html#smp">SMP</a>)
+	</li>
+	<li>End-to-end encrypted <b>audio and video calls</b> from Firefox and Chrome without plugin
+	</li>
+	<li>A growing number of <b>international</b> languages supported
+	</li>
+	<li>Event <b>notifications</b> with sound if browser/tab inactive <small>(not yet supported in Internet Explorer)</small></li>
+</ul>
+<a href="features.html">Full list of features</a>
