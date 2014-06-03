@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 {% if page.description %}<meta name="description" content="{{page.description}}">{% endif %}
 
+<link rel="stylesheet" type="text/css" href="stylesheets/jquery.colorbox.css" />
 <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
@@ -13,6 +14,18 @@
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/jquery.colorbox-min.js"></script>
+<script>
+$(function(){
+        $('a[href^="images/"]').colorbox({
+            maxWidth: '90%',
+            maxHeight: '90%',
+            rel: 'gal'
+        });
+});
+</script>
 
 <title>JSXC: JavaScript XMPP Client{% if page.title %} - {{page.title}}{% endif %}</title>
 </head>
