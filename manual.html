@@ -5,6 +5,7 @@ title: Manual
 <h1>User Manual</h1>
 
 <ol>
+    <li><a href="#intro">General Information</a></li>
     <li><a href="#login">First Login</a></li>
     <li><a href="#roster">Roster Management</a></li>
     <ul>
@@ -21,7 +22,18 @@ title: Manual
     </ul>
 </ol>
 
-<h2 class="clear"><a name="login" class="anchor" href="#login"><span class="octicon octicon-link"></span></a>1. First Login
+<h2 class="clear"><a name="intro" class="anchor" href="#intro"><span class="octicon octicon-link"></span></a>1. General Information</a>
+<p>
+    <a href="faq.html#xmpp">XMPP</a>, the protocol used by JSXC, identifies every user by a <a href="faq.html#jid">JID</a>. This JID has the same format as an email address: a local part (typically user name) and a domain name, separated by @. The advantage of this notation is that organizations providing both email (typically asynchronous) and XMPP (typically synchronous) communication, can provide provide <strong>both services with one mnemonic ID</strong>. This allows for integrated and unified communication, where a single ID can be used for email, instant messaging, and audio/video communications; thus alleviating the need for users to remember multiple IDs, such as (non-mnemonic) telephone numbers, video conference IDs, and so on.
+</p>
+
+<p>Even though both XMPP and email use the same address format, they are distinct services, not unlike fax, text messages (SMS), and voice telephony using a single `telephone number' format, even though the services differ in what they exchange, the protocol, and the typical uses.
+</p>
+
+<p>Unlike proprietary instant messaging services, XMPP allows anyone operating a domain and a server to provide XMPP service for its users. XMPP was designed from the start to allow these servers to easily interoperate, making it easy for <em>userA@serverA</em> to communicate with <em>userB@serverB</em>, as if they were on the same server. This federated design enables privacy from the start, there is no central authority which knows what you are doing when and who your friends are. Only servers with a need to know (because they host an account for one of your friends) will ever know anything about you; third parties remain ignorant.
+</p>
+
+<h2 class="clear"><a name="login" class="anchor" href="#login"><span class="octicon octicon-link"></span></a>2. First Login
     <a href="images/manual-login.jpeg"><img src="images/manual-login-thumb.jpeg" alt="Screenshot login" align="right"></a></h2>
 <p>
 For this section, we assume that you are using JSXC with unified login, i.e., logging in to your web application such as SOGo or ownCloud will also log you into your JSXC XMPP Chat.
@@ -37,7 +49,7 @@ After successful login, the right hand side of your application will show the JS
 If you would like to use more screen real estate for your application, you can resize or <b>hide</b> the JSXC bar by clicking on the vertical dividing line to the main application. It can be restored by clicking on the right edge of the window. Your web browser will remember the bar visibility.
 </p>
 
-<h2 class="clear"><a name="roster" class="anchor" href="#roster"><span class="octicon octicon-link"></span></a>2. Roster Management
+<h2 class="clear"><a name="roster" class="anchor" href="#roster"><span class="octicon octicon-link"></span></a>3. Roster Management
     <a href="images/manual-roster.jpeg"><img src="images/manual-roster-thumb.jpeg" alt="Screenshot key generation" align="right"></a>
 </h2>
 <p>
@@ -73,7 +85,7 @@ If you empty the nickname, the JID will be displayed. This can also be helpful i
 When hovering the mouse over a contact, two icons will float in from the right: A pen to <a href="#modify">edit</a> the name, and a cross to delete it. Clicking on the cross icon will delete the contact from your roster and will revoke their right of seeing your online status.
 </p>
 
-<h2 class="clear"><a name="notifications" class="anchor" href="#notifications"><span class="octicon octicon-link"></span></a>3. Notifications
+<h2 class="clear"><a name="notifications" class="anchor" href="#notifications"><span class="octicon octicon-link"></span></a>4. Notifications
     <a href="images/manual-subreq.jpeg"><img src="images/manual-subreq-thumb.jpeg" alt="Screenshot subscription request" align="right"></a>
 </h2>
 <p>
@@ -88,14 +100,14 @@ When your chat tab or window is not active, most modern browsers offer the abili
 </p>
 <a href="images/manual-notbox.jpeg"><img src="images/manual-notbox-thumb.jpeg" alt="Screenshot notification" align="right"></a>
 
-<h2 class="clear"><a name="status" class="anchor" href="#status"><span class="octicon octicon-link"></span></a>4. Setting Your Status
+<h2 class="clear"><a name="status" class="anchor" href="#status"><span class="octicon octicon-link"></span></a>5. Setting Your Status
     <a href="images/manual-status.jpeg"><img src="images/manual-status-thumb.jpeg" alt="Screenshot notification request" align="right"></a>
 </h2>
 <p>
 You can tell your contacts whether you are available, e.g. by setting the status to <b>away</b> or <b>do not disturb</b>. Your contacts will see this by the colored bar left of their roster entry for you which will change to yellow or red as a result of this.
 </p>
 
-<h2 class="clear"><a name="chat" class="anchor" href="#chat"><span class="octicon octicon-link"></span></a>5. Chatting
+<h2 class="clear"><a name="chat" class="anchor" href="#chat"><span class="octicon octicon-link"></span></a>6. Chatting
     <a href="images/manual-chat.jpeg"><img src="images/manual-chat-thumb.jpeg" alt="Screenshot chat window" align="right"></a>
 </h2>
 <p>
