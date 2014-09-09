@@ -546,3 +546,22 @@ a[href^="xmpp:"] {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {}
+
+.right {
+	float: right;
+}
+
+#feature-gallery {
+	width: 100px;
+   float: right;
+   clear: right;
+}
+
+#feature-gallery a {
+	float: right;
+}
+
+#feature-gallery img {
+	max-height: 80px;
+	max-width: 100px;
+}

@@ -2,7 +2,9 @@
 layout: default
 title: Features
 ---
-<a href="images/SOGo-screenshot.png"><img src="images/SOGo-screenshot-thumb.png" alt="Screenshot SOGo" align="right"></a>
+<a href="images/SOGo-screenshot.png" class="right"><img src="images/SOGo-screenshot-thumb.png" alt="Screenshot SOGo"></a>
+<div id="feature-gallery" class="right"></div>
+
 <h2>
     JSXC Feature List
 </h2>
@@ -59,3 +61,26 @@ title: Features
     <li>Audio/video conference</li>
     <li>Encrypted file transfer</li>
 </ul>
+
+<script>
+$(function(){
+   function pad (str, max) {
+      str = str.toString();
+      return str.length < max ? pad("0" + str, max) : str;
+   }
+   
+   var i, a, file;
+   
+   for (i = 0; i <= 10; i++) {
+      file = 'images/features/' + pad(i + '', 4) + '.png';
+      
+      a = $('<a>');
+      a.attr('href', file);
+      a.append('<img src="' + file + '" alt="feature' + i + '"/>');
+      
+      $('#feature-gallery').append(a);
+   }
+   
+   $('#feature-gallery a').colorbox({rel: 'gal'});
+});
+</script>
