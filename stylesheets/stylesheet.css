@@ -565,3 +565,12 @@ a[href^="xmpp:"] {
 	max-height: 80px;
 	max-width: 100px;
 }
+
+div.sidebar.right {
+	margin-left: 10px;
+}
+
+div.sidebar.right a {
+	display: block;
+	margin-bottom: 5px;
+}
