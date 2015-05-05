@@ -6,17 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 {% if page.description %}<meta name="description" content="{{page.description}}">{% endif %}
 
-<link rel="stylesheet" type="text/css" href="stylesheets/jquery.colorbox.css" />
-<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.colorbox.css" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print" />
 
 <!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<script src="javascripts/jquery.min.js"></script>
-<script src="javascripts/jquery.colorbox-min.js"></script>
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/jquery.colorbox-min.js"></script>
 <script>
 $(function(){
         $('a[href^="images/"]').colorbox({
@@ -33,7 +33,7 @@ $(function(){
 <body>
    <header>
       <div class="inner">
-         <h1>JSXC{% if page.title %}: {{page.title}}{% endif %}</h1>
+         <h1>JSXC{% if page.title and page.is_post != true %}: {{page.title}}{% endif %}</h1>
          <h2>JavaScript XMPP Client</h2>
          <a href="https://github.com/jsxc" class="button"><small>View project on</small>GitHub</a>
       </div>
@@ -48,13 +48,14 @@ $(function(){
          <nav id="mainnav">
             <ul>
                <li><a href="/">Home</a></li>
-               <li><a href="features.html">Features</a></li>
-               <li><a href="examples.html">Examples</a></li>
-               <li><a href="installation.html">Installation</a></li>
-               <li><a href="manual.html">User Manual</a></li>
-               <li><a href="faq.html">FAQ</a></li>
-               <li><a href="publications.html">Publications</a></li>
-               <li><a href="contact.html">Contact</a></li>
+               <!--<li><a href="/blog/">Blog</a></li>-->
+               <li><a href="/features.html">Features</a></li>
+               <li><a href="/examples.html">Examples</a></li>
+               <li><a href="/installation.html">Installation</a></li>
+               <li><a href="/manual.html">User Manual</a></li>
+               <li><a href="/faq.html">FAQ</a></li>
+               <li><a href="/publications.html">Publications</a></li>
+               <li><a href="/contact.html">Contact</a></li>
             </ul>
          </nav>
 

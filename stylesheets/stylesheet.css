@@ -525,7 +525,7 @@ footer a:hover {
   }
 }
 
-a[href^="mailto:"], a[href^="xmpp:"] {
+a.icon[href^="mailto:"], a.icon[href^="xmpp:"] {
     display: inline-block;
     width: 1em;
     height: 1em;
@@ -533,12 +533,37 @@ a[href^="mailto:"], a[href^="xmpp:"] {
     background-position: center center;
     background-size: 0.95em auto;
 }
-a[href^="mailto:"] {
+a.icon[href^="mailto:"] {
     background-image: url('../images/mail.svg');
 }
 
-a[href^="xmpp:"] {
+a.icon[href^="xmpp:"] {
     background-image: url('../images/xmpp.svg');
+}
+
+.post {
+   margin-bottom: 70px;
+}
+.post .meta {
+   margin-bottom: 0px;
+}
+.post .meta.avatar {
+   margin-bottom: 20px;
+   line-height: 32px;
+}
+.post .meta img.avatar {
+   width: 32px;
+   border-radius: 50px;
+   display: inline-block;
+   margin-right: 5px;
+   border: 1px solid #e1e1e1;
+   vertical-align: bottom;
+}
+#main-content .post .meta + h3 {
+   margin-top: 0px;
+}
+.post .content > p:first-child {
+   font-weight: bold;
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
