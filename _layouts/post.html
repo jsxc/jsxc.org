@@ -25,3 +25,9 @@ layout: default
       {{ content }}
    </div>
 </div>
+
+<script>
+$('.post img').click(function() {
+   $(this).colorbox({href: $(this).attr('src')});
+});
+</script>

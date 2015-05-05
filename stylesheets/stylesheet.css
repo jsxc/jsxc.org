@@ -563,7 +563,6 @@ a.icon[href^="xmpp:"] {
    margin-top: 0px;
 }
 .post .content > p:first-child {
-   font-weight: bold;
 }
 
 .pagination {
