@@ -511,7 +511,6 @@ footer a:hover {
     min-height: 0;
   }
   aside#sidebar a.button {
-    display: none;
   }
   #main-content h1:before,
   #main-content h2:before,
@@ -522,6 +521,15 @@ footer a:hover {
     content: none;
     padding-right: 0;
     margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 580px){
+  #main-content .right.sidebar {
+    display: none;
+  }
+  nav#mainnav {
+    float:none;
   }
 }
 
