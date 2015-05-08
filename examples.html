@@ -1,35 +1,26 @@
 ---
 layout: default
-title: Examples
+title: Example: ownCloud
 ---
 <h1>Usage Examples</h1>
-
-<h2>ownCloud Integration</h2>
-<a href="images/owncloud-screenshot.png"><img src="images/owncloud-screenshot-thumb.png" alt="Screenshot ownCloud" align="right"></a>
-<p><a href="http://owncloud.org">ownCloud</a> already provides self-hosted storage and sharing of
-files, contacts, calendars, and much more. Collaborating on documents frequently requires coordination.
-This is where JSXC (in the shape of the <a href="http://apps.owncloud.com/content/show.php/JavaScript+XMPP+Chat?content=162257">ojsxc app for ownCloud</a>) caters for your needs.</p>
-
-<p>Besides the <a href="features.html">standard features of JSXC</a>, the ownCloud integration adds:</p>
 <ul>
-    <li>Unified login: Logging into ownCloud also logs you in to JSXC/XMPP</li>
-    <li>Configuration from within ownCloud's administrative interface</li>
+	<li><a href="sogo.html">SOGo</a></li>
+	<li><a href="owncloud.html">ownCloud</a></li>
+	<li><a href="ilias.html">Ilias</a></li>
+	<li><a href="example.html">Your own web application</a></li>
 </ul>
 
-<h2>SOGo Integration</h2>
-<a href="images/SOGo-screenshot.png"><img src="images/SOGo-screenshot-thumb.png" alt="Screenshot SOGo" align="right"></a>
-<p><a href="http://sogo.nu">Scalable Open Groupware, SOGo</a> combines a Thunderbird-lookalike web interface for email browsing with enterprise-quality CalDAV/CardDAV calendaring and address books. JSXC not only shares web browser real estate with SOGo, but actually augments it. Having received an email, you can immediately call back via instant messaging or XMPP-based VoIP audio/video call, if you require additional information or if the matter is better settled face-to-face.
-
-The <a href="features.html">standard features of JSXC</a> are extended by:</p>
-
-<ul>
-    <li>Unified login: Logging into SOGo also logs you in to JSXC/XMPP</li>
-    <li>JSXC recognizes XMPP IDs (Jabber ID, JID) in the SOGo content (address books, emails, …)</li>
-    <li>JIDs in  and enhances them with presence
-    information (the colored bullets in the screen shot's magnifying glass).</li>
-</ul>
+<h2>Integration into your own webapp</h2>
 
 <h2>Other Integration</h2>
 <a href="images/rz-screenshot.png"><img src="images/rz-screenshot-thumb.png" alt="Screenshot RZ" align="right"></a>
 <p>JSXC can be integrated in other web pages as well. If you want to add comfort features such as unified login, configuration, or JID detection, you need to add specific code to do this (don't worry, we're working on a how-to description). On the right, you can see an integration into the <a href="http://www.uni-konstanz.de">University's</a> <a href="http://typo3.org">Typo3</a> Web Content Management System.
 </p>
+
+<p>Besides the <a href="features.html">standard features of JSXC</a>, you can optionally add the following:</p>
+<ul>
+    <li>Unified login: Logging into your app also logs you in to JSXC/XMPP</li>
+    <li>Configuration from within your app's administrative interface</li>
+    <li>Recognizing <a href="faq.html#jid">JID</a>, making it active and adding presence information to it</li>
+    <li>Automatically join MUCs associated with this page (e.g. for group documents)</li>
+</ul>
