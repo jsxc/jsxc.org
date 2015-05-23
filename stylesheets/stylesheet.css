@@ -161,13 +161,16 @@ nav#mainnav li, nav#mainnav li a, nav#mainnav li a:hover{
 nav#mainnav li a:hover{
 	color: #000;
 }
-nav#mainnav li:hover:before{
+nav#mainnav li:hover:before, nav#mainnav li.active:before{
 	content: '/';
 	color: #9ddcff;
 	position:absolute;
 	font-size:110%;
 	left: -0.9em;
 	font-weight:bold;
+}
+nav#mainnav li ul a {
+    font-size: 15px;
 }
 
 #downloads {
