@@ -17,7 +17,7 @@ title: FAQ
 		<strong>Reason:</strong> You are violating the browser same-origin-policy (SOP), which prevents cross-side requests between sites with different domains or ports (protocols).<br />
 		<strong>Test:</strong> Open your JavaScript console and look for errors.<br />
 		<strong>Solution 1:</strong> Enable CORS for your BOSH server (Default for ejabberd; prosody needs <code>cross_domain_bosh = true</code>) and if you have a modified content-security-policy (e.g. owncloud), then add your BOSH domain to the <code>default-src</code> section.<br />
-		<strong>Solution 2:</strong> Create a proxy like descripted in our [prepare apache guide](https://github.com/jsxc/jsxc/wiki/Prepare-apache).
+		<strong>Solution 2:</strong> Create a proxy like descripted in our <a href="https://github.com/jsxc/jsxc/wiki/Prepare-apache">prepare apache guide</a>.
 	</li>
 </ol>
 
