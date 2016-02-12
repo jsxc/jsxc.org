@@ -570,6 +570,16 @@ a.icon[href^="xmpp:"] {
    border: 1px solid #e1e1e1;
    vertical-align: bottom;
 }
+.post .navigation {
+   margin-top: 50px;
+   border-top: 1px solid #e1e1e1;
+   padding-top: 20px;
+}
+.post .navigation > div {
+   width: 50%;
+   text-align: center;
+   float: left;
+}
 #main-content .post .meta + h3 {
    margin-top: 0px;
 }
