@@ -529,7 +529,12 @@ footer a:hover {
 
 @media only screen and (max-width: 580px){
   #main-content .right.sidebar {
-    display: none;
+    float: none;
+  }
+  #main-content .right.sidebar a {
+     width: 47%;
+     margin-right: 3%;
+     float: left;
   }
   nav#mainnav {
     float:none;
@@ -622,4 +627,11 @@ div.sidebar.right {
 div.sidebar.right a {
 	display: block;
 	margin-bottom: 5px;
+}
+
+#main-content a > img  {
+   border: 3px solid #e1e1e1
+}
+#main-content a > img:hover {
+   border: 3px solid #a1a1a1;
 }
