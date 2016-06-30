@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset='utf-8'>
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-{% if page.description %}<meta name="description" content="{{page.description}}">{% endif %}
+<meta charset='utf-8'/>
+<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+{% if page.description %}<meta name="description" content="{{page.description}}"/>
+<meta name="og:description" content="{{page.description}}"/>{% endif %}
+{% if page.image %}<meta name="og:image" content="{{page.image}}"/>{% else %}<meta name="og:image" content="/images/jsxc.png"/>{% endif %}
+<meta name="og:site_name" content="JSXC"/>
 
 {% feed_meta %}
 
@@ -51,13 +54,13 @@ $(function(){
             <ul>
                <li><a href="/">Home</a></li>
                <li><a href="/blog/">Blog</a></li>
-               <li><a href="/features.html">Features</a></li>
-               <li><a href="/examples.html">Examples</a></li>
-               <li><a href="/installation.html">Installation</a></li>
-               <li><a href="/manual.html">User Manual</a></li>
-               <li><a href="/faq.html">FAQ</a></li>
-               <li><a href="/publications.html">Publications</a></li>
-               <li><a href="/contact.html">Contact</a></li>
+               <li><a href="/features/">Features</a></li>
+               <li><a href="/examples/">Examples</a></li>
+               <li><a href="/installation/">Installation</a></li>
+               <li><a href="/manual/">User Manual</a></li>
+               <li><a href="/faq/">FAQ</a></li>
+               <li><a href="/publications/">Publications</a></li>
+               <li><a href="/contact/">Contact</a></li>
             </ul>
          </nav>
 
