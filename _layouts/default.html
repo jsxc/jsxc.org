@@ -26,18 +26,6 @@
 <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<script src="/javascripts/jquery.min.js"></script>
-<script src="/javascripts/jquery.colorbox-min.js"></script>
-<script>
-$(function(){
-        $('a[href^="images/"]').colorbox({
-            maxWidth: '90%',
-            maxHeight: '90%',
-            rel: 'gal'
-        });
-});
-</script>
-
 <title>JSXC: JavaScript XMPP Client{% if page.title %} / {{page.title}}{% endif %}</title>
 </head>
 
@@ -81,6 +69,18 @@ $(function(){
          </aside>
       </div>
    </div>
+
+   <script src="/javascripts/jquery.min.js"></script>
+   <script src="/javascripts/jquery.colorbox-min.js"></script>
+   <script>
+   $(function(){
+           $('a[href^="images/"]').colorbox({
+               maxWidth: '90%',
+               maxHeight: '90%',
+               rel: 'gal'
+           });
+   });
+   </script>
 
 <!-- Piwik -->
 <script type="text/javascript">
