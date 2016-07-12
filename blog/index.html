@@ -1,6 +1,14 @@
 ---
 layout: default
 title: Blog
+bodyScript: |
+   <script src="/javascripts/jquery.jscroll.min.js"></script>
+   <script type="text/javascript">
+   $('#main-content').jscroll({
+      contentSelector: ".posts",
+      nextSelector: '.next'
+   });
+   </script>
 ---
 
 <h2>Recent Articles</h2>
@@ -32,12 +40,3 @@ title: Blog
     <a href="{{ paginator.next_page_path }}" class="next">Next</a>
   {% endif %}
 </div>
-
-<script src="{{ site.siteurl }}/javascripts/jquery.jscroll.min.js"></script>
-
-<script type="text/javascript">
-$('#main-content').jscroll({
-    contentSelector: ".posts",
-    nextSelector: '.next'
-});
-</script>
