@@ -5,40 +5,45 @@ layout: default
 <!-- Look the author details up from the site config. -->
 {% assign author = site.data.authors[page.author] %}
 
+<section id="post">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        {% if author %}
+           <p class="meta avatar">
+              <!-- Personal Info. -->
+              <img class="avatar" src="{{site.url}}/images/avatar/{{page.author}}.jpg" alt="A photo of {{ author.name }}"/>
+              <a href="mailto:{{ author.email }}">{{ author.name }}</a> wrote this on <time datetime="{{page.date}}"> {{ page.date | date: '%B %d, %Y' }}</time>
+           </p>
+        {% else %}
+           <p class="meta">
+              Written on <time datetime="{{page.date}}">{{ page.date | date: '%B %d, %Y' }}</time>
+           </p>
+        {% endif %}
 
-<div class="post">
-{% if author %}
-   <p class="meta avatar">
-      <!-- Personal Info. -->
-      <img class="avatar" src="{{site.url}}/images/avatar/{{page.author}}.jpg" alt="A photo of {{ author.name }}"/>
-      <a href="mailto:{{ author.email }}">{{ author.name }}</a> wrote this on <time datetime="{{page.date}}"> {{ page.date | date: '%B %d, %Y' }}</time>
-   </p>
-{% else %}
-   <p class="meta">
-      Written on <time datetime="{{page.date}}">{{ page.date | date: '%B %d, %Y' }}</time>
-   </p>
-{% endif %}
+           <h2>{{ page.title }}</h2>
 
-   <h2>{{ page.title }}</h2>
-   
-   <div class="content">
-      {{ content }}
-   </div>
-   
-   <div class="navigation">
-      <div class="previous">
-         {% if page.previous %}
-            <a href="{{page.previous.url}}" title="previous post">&lt;&lt; {{page.previous.title}}</a>
-         {% endif %}
+           <div class="content">
+              {{ content }}
+           </div>
+
+           <div class="navigation">
+              <div class="previous">
+                 {% if page.previous %}
+                    <a href="{{page.previous.url}}" title="previous post">&lt;&lt; {{page.previous.title}}</a>
+                 {% endif %}
+              </div>
+              <div class="next">
+                 {% if page.next %}
+                    <a href="{{page.next.url}}" title="next post">{{page.next.title}} &gt;&gt;</a>
+                 {% endif %}
+              </div>
+              <div class="clear"></div>
+           </div>
       </div>
-      <div class="next">
-         {% if page.next %}
-            <a href="{{page.next.url}}" title="next post">{{page.next.title}} &gt;&gt;</a>
-         {% endif %}
-      </div>
-      <div class="clear"></div>
-   </div>
-</div>
+    </div>
+  </div>
+</section>
 
 <script>
 $('.post img').click(function() {

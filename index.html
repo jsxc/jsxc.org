@@ -3,55 +3,139 @@ layout: default
 description: Secure, private audio/video chat client based on the open protocols and open source; easily integrated into any web site or application. JSXC provides full XMPP federation support and ease of use.
 image: /images/v3.0.0/screenshot-owncloud.png
 permalink: /:path/:basename:output_ext
+subtitle: Make XMPP great again!
+landing: true
+navWeight: 1
+navTitle: Home
 ---
+<section id="mainFeatures">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-header">What JSXC offers you</h2>
+				<h3 class="section-subheader">Make chatting easy for everyone!</h3>
+			</div>
+		</div>
+		<div class="row text-center animatedParent animateOnce" data-appear-top-offset='-100'>
+			<div class="col-xs-4">
+				<img src="/images/icons/wax-seal-with-ribbon.svg" class="img-circle animated growIn" alt=""/>
+				<h4>Standard</h4>
+				<p class="text-muted">Stet clita kasd gubergren</p>
+			</div>
+			<div class="col-xs-4">
+				<img src="/images/icons/dancer-pose.svg" class="img-circle animated growIn" alt=""/>
+				<h4>Flexible</h4>
+				<p class="text-muted">Lorem ipsum dolor sit ame</p>
+			</div>
+			<div class="col-xs-4">
+				<img src="/images/icons/light-bulb.svg" class="img-circle animated growIn" alt=""/>
+				<h4>Easy</h4>
+				<p class="text-muted">At vero eos et accusam</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="getStarted">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-header">How to start</h2>
+				<h3 class="section-subheader">Choose your version</h3>
+			</div>
+		</div>
+		<div class="row animatedParent animateOnce" data-appear-top-offset='-100'>
+			<div class="col-sm-6 box-item animated rotateInUpLeft" data-id="1">
+				<div class="box-content">
+					<img src="images/v3.0.0/screenshot-example.png" alt="" />
+				</div>
+				<div class="box-caption">
+					<h4>Your Application</h4>
+					<p class="text-muted">Integrate JSXC into your application</p>
+				</div>
+			</div>
+			<div class="col-sm-6 box-item animated rotateInUpLeft" data-id="2">
+				<div class="box-content">
+					<img src="images/v3.0.0/screenshot-owncloud.png" alt="" />
+				</div>
+				<div class="box-caption">
+					<h4>Owncloud / Nextcloud</h4>
+					<p class="text-muted">Download and Install JSXC into your Cloud</p>
+				</div>
+			</div>
+		</div>
+		<div class="row animatedParent animateOnce" data-appear-top-offset='-100'>
+			<div class="col-sm-6 box-item animated rotateInUpLeft" data-id="3">
+				<div class="box-content">
+					<img src="images/v3.0.0/screenshot-sogo.png" alt="" />
+				</div>
+				<div class="box-caption">
+					<h4>SOGo</h4>
+					<p class="text-muted">Extend your webmailer with realtime communication</p>
+				</div>
+			</div>
+			<div class="col-sm-6 box-item animated rotateInUpLeft" data-id="4">
+				<div class="box-content">
+					<img src="images/v3.0.0/screenshot-ilias.png" alt="" />
+				</div>
+				<div class="box-caption">
+					<h4>Example Integrations</h4>
+					<p class="text-muted">Get inspired by other projects</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-<h2>
-	<a name="jsxc---core" class="anchor" href="#jsxc---core"><span class="octicon octicon-link"></span></a> <a name="javascript-xmpp-client" href="#javascript-xmpp-client"></a>Add real-time XMPP chat to any web application!
-</h2>
+<section id="features">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-header">Features</h2>
+				<h3 class="section-subheader">What does JSXC offer you?</h3>
+			</div>
+		</div>
+		<div class="row animatedParent animateOnce" data-appear-top-offset='-100' data-sequence="100">
+			{% include features.html %}
+		</div>
+		<div class="row">
+			<div class="col-lg-12 more-features text-center">
+				<p><a href="features.html">
+					<i class="fa fa-plus-square-o" aria-hidden="true"></i> More</a></p>
+			</div>
+		</div>
+	</div>
+</section>
 
-<div class="right sidebar">
-	<a href="images/v3.0.0/screenshot-owncloud.png"><img src="images/v3.0.0/thumb/screenshot-owncloud.png" alt="Screenshot ownCloud"></a>
-	<a href="images/v3.0.0/screenshot-example.png"><img src="images/v3.0.0/thumb/screenshot-example.png" alt="Screenshot Example"></a>
-	<a href="images/v3.0.0/screenshot-sogo.png"><img src="images/v3.0.0/thumb/screenshot-sogo.png" alt="Screenshot SOGo"></a>
-	<a href="images/v3.0.0/screenshot-ilias.png"><img src="images/v3.0.0/thumb/screenshot-ilias.png" alt="Screenshot Ilias"></a>
-</div>
-
-<p>Communication should be immediate, secure, private, and without hurdles. The <a href="http://xmpp.org/">Extensible Messaging and Presence Protocol (XMPP)</a> already provides the first three. But in today's world, most users will be in the browser, so even the most basic application installation can be a major hurdle.
-</p>
-
-<p>JSXC to the rescue: Just add a few simple lines to your web site or web application, and your users can immediately communicate over your organisation's XMPP server. Providing the most commonly used XMPP client functionality in an easy package, JSXC will improve collaboration among your employees, simplify communications, and get questions answered quicker.</p>
-
-<p>To improve your communication both within your organisation and with partners all over the world, you can use preconfigured JSXC plugins for <a href="sogo.html">SOGo groupware</a>, <a href="owncloud.html">ownCloud cloud storage</a>, and <a href="ilias.html">Ilias e-learning platform<a/>. You can also use the built-in JSXC in <a href="https://www.diasporafoundation.org">Diaspora*<a> or <a href="installation.html">manually add JSXC to your web site or application</a>.
-
-<p>JSXC is a first implementation of the <a href="faq.html#wisechat">WISEchat</a> paradigm.</p>
-
-<h2>
-	<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a> <a name="features" href="#features"></a>Main Features
-</h2>
-
-<ul>
-	<li>Full-featured <b>XMPP client</b> in the browser, no client installation required
-	</li>
-	<li>Easy <b>integration</b> into your existing web page or application
-	</li>
-	<li><b>Interaction</b> with your web page, e.g. making Jabber IDs active</li>
-	<li><b>Uninterrupted browsing</b> among JSXC-enhanced pages</li>
-	<li>One-to-one chats, optionally with <b>end-to-end encryption</b> (<a href="faq.html#otr">OTR</a>) and user verification (<a href="faq.html#smp">SMP</a>)
-	</li>
-	<li>End-to-end encrypted <b>audio and video calls</b> from Firefox and Chrome without plugin
-	</li>
-	<li><b>multi-user chat (MUC)</b> rooms for text messages
-	</li>
-	<li>A growing number of <b>international</b> languages supported
-	</li>
-	<li>Event <b>notifications</b> with sound if browser/tab inactive <small>(not yet supported in Internet Explorer)</small></li>
-</ul>
-<p><a href="features.html">Full list of features</a></p>
-
-<h2>Recent Article</h2>
-<div class="post">
-   {% assign post = site.posts.first %}
-   <p class="meta">{{ post.date | date: '%A %B %d %Y' }}</p>
-   <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-   <p>{{post.excerpt | remove: '<p>' | remove: '</p>'}} <a href="{{post.url}}">[more]</a></p>
-</div>
+<section id="blog">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-header">Recent Article</h2>
+				<h3 class="section-subheader">Get the latest announcement</h3>
+			</div>
+		</div>
+		<div class="row animatedParent animateOnce" data-appear-top-offset='-150'>
+			<div class="col-md-8 col-md-offset-2">
+				<div class="vertical-timeline">
+                <div class="vertical-timeline-block">
+                    <div class="vertical-timeline-icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="vertical-timeline-content blog-item animated fadeInDownShort">
+											{% assign post = site.posts.first %}
+											<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+											<p>{{post.excerpt | remove: '<p>' | remove: '</p>'}} <a href="{{ post.url }}">[...]</a></p>
+											<p class="meta"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: '%A %B %d %Y' }}</p>
+                    </div>
+                </div>
+            </div>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-lg-12 more-articles">
+				<p><a href="blog/">
+					<i class="fa fa-book" aria-hidden="true"></i> More</a></p>
+			</div>
+		</div>
+	</div>
+</section>

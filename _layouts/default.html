@@ -18,11 +18,11 @@
 {% feed_meta %}
 
 <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
-
-<link rel="stylesheet" type="text/css" href="/stylesheets/jquery.colorbox.css" />
-<link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/animations.css" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 
 <!--[if lt IE 9]>
 <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -31,49 +31,95 @@
 <title>JSXC: JavaScript XMPP Client{% if page.title %} / {{page.title}}{% endif %}</title>
 </head>
 
-<body>
+<body {% if page.landing == true %}class="landing"{% endif %}>
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">JSXC</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a {% if '/' == page.url %}class="current"{% endif %} href="/">Home</a></li>
+        <li><a {% if page.url contains '/blog' %}class="current"{% endif %}  href="/blog/">Blog</a></li>
+        <li><a {% if '/features.html' == page.url %}class="current"{% endif %} href="/features.html">Features</a></li>
+        <li><a {% if '/installation.html' == page.url %}class="current"{% endif %} href="/installation.html">Installation</a></li>
+        <li><a {% if '/manual.html' == page.url %}class="current"{% endif %} href="/manual.html">User Manual</a></li>
+        <li><a {% if '/faq.html' == page.url %}class="current"{% endif %} href="/faq.html">FAQ</a></li>
+        <li><a {% if '/publications.html' == page.url %}class="current"{% endif %} href="/publications.html">Publications</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
    <header>
       <div class="inner">
-         <h1>JSXC{% if page.title and page.is_post != true %}: {{page.title}}{% endif %}</h1>
-         <h2>JavaScript XMPP Client</h2>
-         <a href="https://github.com/jsxc" class="button"><small>View project on</small>GitHub</a>
+         <h1>{% if page.is_post %}Blog{% elsif page.title %}{{page.title}}{% else %}JavaScript XMPP Client{% endif %}</h1>
+         {% if page.subtitle and page.is_post != true %}<h2>{{page.subtitle}}</h2>{% endif %}
       </div>
    </header>
 
-   <div id="content-wrapper">
-      <div class="inner clearfix">
-         <section id="main-content">
+   <main id="content-wrapper">
             {{content}}
-         </section>
+   </main>
 
-         <nav id="mainnav">
-            <ul>
-               <li><a href="/">Home</a></li>
-               <li><a href="/blog/">Blog</a></li>
-               <li><a href="/features.html">Features</a></li>
-               <li><a href="/examples.html">Examples</a></li>
-               <li><a href="/installation.html">Installation</a></li>
-               <li><a href="/manual.html">User Manual</a></li>
-               <li><a href="/faq.html">FAQ</a></li>
-               <li><a href="/publications.html">Publications</a></li>
-               <li><a href="/contact.html">Contact</a></li>
-            </ul>
-         </nav>
-
-         <aside id="sidebar">
-            <a href="https://github.com/jsxc/jsxc/releases" class="button"> <small>Download</small> JSXC Core</a>
-                <a href="https://github.com/jsxc/jsxc.owncloud/releases" class="button"> <small>Download JSXC for</small> ownCloud</a>
-                <a href="https://github.com/jsxc/jsxc.sogo/releases" class="button"> <small>Download JSXC for</small> SOGo</a>
-		<a href="https://github.com/jsxc/jsxc.ilias/releases" class="button deprecated"> <small>Download JSXC for</small> Ilias</a>
-            <p>
-               This page is derived from the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-            </p>
-         </aside>
-      </div>
-   </div>
+   <section id="contact">
+   	<div class="container">
+   		<div class="row">
+   			<div class="col-lg-12 text-center">
+   				<h2 class="section-header">Social</h2>
+   				<h3 class="section-subheader">Get in touch with us</h3>
+   			</div>
+   		</div>
+   		<div class="row">
+   			<div class="col-xs-4 col-md-2 col-md-offset-3 text-center">
+   				<a href="https://github.com/jsxc" class="contact-github">
+   					<div class="contact-icon">
+   						<i class="fa fa-github" aria-hidden="true"></i>
+   					</div>
+   					<div class="contact-caption">
+   						Github
+   					</div>
+   				</a>
+   			</div>
+   			<div class="col-xs-4 col-md-2 text-center">
+   				<a href="/contact.html" class="contact-card">
+   					<div class="contact-icon">
+   						<i class="fa fa-address-card" aria-hidden="true"></i>
+   					</div>
+   					<div class="contact-caption">
+   						Contact
+   					</div>
+   				</a>
+   			</div>
+   			<div class="col-xs-4 col-md-2 text-center">
+   				<a href="#" class="contact-twitter">
+   					<div class="contact-icon">
+   						<i class="fa fa-twitter" aria-hidden="true"></i>
+   					</div>
+   					<div class="contact-caption">
+   						Twitter
+   					</div>
+   				</a>
+   			</div>
+   		</div>
+   		<div class="row footer">
+   			<div class="col-lg-12 text-center">
+   				<p class="text-muted">Improve this website on <a href="#">jsxc/jsxc.org</a>.</p></p>
+   			</div>
+   		</div>
+   	</div>
+   </section>
 
    <script src="/javascripts/jquery.min.js"></script>
    <script src="/javascripts/jquery.colorbox-min.js"></script>
+   <script src="/javascripts/css3-animate-it.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script>
    $(function(){
            $('a[href^="images/"]').colorbox({
@@ -81,6 +127,15 @@
                maxHeight: '90%',
                rel: 'gal'
            });
+   });
+   $(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    var nav = $('#mainNav');
+    if (scroll > 100 && !nav.hasClass('navbar-graceful')) {
+      nav.addClass('navbar-graceful');
+    } else if(scroll <= 100 && nav.hasClass('navbar-graceful')) {
+      nav.removeClass('navbar-graceful');
+    }
    });
    </script>
 
