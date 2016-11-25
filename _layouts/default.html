@@ -18,10 +18,10 @@
 {% feed_meta %}
 
 <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="/stylesheets/animations.css" />
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/vendor/jquery-colorbox/example1/colorbox.css" />
+<link rel="stylesheet" type="text/css" href="/vendor/css3-animate-it/css/animations.css" />
 <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 
 <!--[if lt IE 9]>
@@ -110,51 +110,22 @@
    		</div>
    		<div class="row footer">
    			<div class="col-lg-12 text-center">
-   				<p class="text-muted">Improve this website on <a href="#">jsxc/jsxc.org</a>.</p></p>
+   				<p class="text-muted">Improve this website on <a href="https://github.com/jsxc/jsxc.org">jsxc/jsxc.org</a>.</p></p>
    			</div>
    		</div>
    	</div>
    </section>
 
-   <script src="/javascripts/jquery.min.js"></script>
-   <script src="/javascripts/jquery.colorbox-min.js"></script>
-   <script src="/javascripts/css3-animate-it.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <script>
-   $(function(){
-           $('a[href^="images/"]').colorbox({
-               maxWidth: '90%',
-               maxHeight: '90%',
-               rel: 'gal'
-           });
-   });
-   $(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-    var nav = $('#mainNav');
-    if (scroll > 100 && !nav.hasClass('navbar-graceful')) {
-      nav.addClass('navbar-graceful');
-    } else if(scroll <= 100 && nav.hasClass('navbar-graceful')) {
-      nav.removeClass('navbar-graceful');
-    }
-   });
-   </script>
+   <script src="/vendor/jquery/dist/jquery.min.js"></script>
+   <script src="/vendor/jquery-colorbox/jquery.colorbox-min.js"></script>
+   <script src="/vendor/css3-animate-it/js/css3-animate-it.js"></script>
+   <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script src="/javascripts/main.js"></script>
 
    {{page.bodyScript}}
 
 <!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://www.jsxc.org/piwik/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 8]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="http://track.webstudio-bodensee.de/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="/piwik/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
 
 </body>

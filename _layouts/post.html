@@ -13,7 +13,7 @@ layout: default
            <p class="meta avatar">
               <!-- Personal Info. -->
               <img class="avatar" src="{{site.url}}/images/avatar/{{page.author}}.jpg" alt="A photo of {{ author.name }}"/>
-              <a href="mailto:{{ author.email }}">{{ author.name }}</a> wrote this on <time datetime="{{page.date}}"> {{ page.date | date: '%B %d, %Y' }}</time>
+              <a href="/contact.html#{{page.author}}">{{ author.name }}</a> wrote this on <time datetime="{{page.date}}"> {{ page.date | date: '%B %d, %Y' }}</time>
            </p>
         {% else %}
            <p class="meta">
@@ -44,9 +44,3 @@ layout: default
     </div>
   </div>
 </section>
-
-<script>
-$('.post img').click(function() {
-   $(this).colorbox({href: $(this).attr('src')});
-});
-</script>

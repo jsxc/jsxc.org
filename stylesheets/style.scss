@@ -17,6 +17,12 @@ $darkblue: #185da8;
     font-weight: 400;
     font-style: normal;
 }
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(../fonts/PT_Sans-Web-Regular.ttf) format('truetype');
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -288,6 +294,7 @@ section {
     margin-top: 10px;
     li {
       margin-bottom: 10px;
+      position: relative;
       &:before {
         content: "\f069";
         font-family: FontAwesome;
@@ -295,6 +302,8 @@ section {
         font-size: 0.6em;
         margin-right: 5px;
         vertical-align: top;
+        position: absolute;
+        right: 100%;
       }
     }
   }
@@ -354,13 +363,13 @@ section {
     margin-bottom: 30px;
     /*overflow: hidden;*/
     &:hover {
-      .feature-icon {
+      /*.feature-icon {
         color: #fff;
         background-color: $blue;
         &.xmpp-icon {
           background-image: url(../images/icons/xmpp-white.svg);
         }
-      }
+      }*/
     }
   }
   .feature-icon {
@@ -690,6 +699,9 @@ section {
   ul {
     text-align: center;
     margin-bottom: 80px;
+    li:before {
+      position: static;
+    }
   }
 }
 #downloads {

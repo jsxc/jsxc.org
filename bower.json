@@ -1,0 +1,26 @@
+{
+  "name": "jsxc.org",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Klaus Herberth <klaus@jsxc.org>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jsxc/jsxc.org",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "css3-animate-it": "iomdesign/css3-animate-it#f5be8f5f8698272efe773b9beb642905f967f7fd",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1",
+    "jquery-colorbox": "^1.6.4"
+  }
+}
