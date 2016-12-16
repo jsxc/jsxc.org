@@ -32,32 +32,32 @@ permalink: /:path/:basename:output_ext
 					where a single ID can be used for email, instant messaging, and audio/video communications; thus alleviating the need for users to remember multiple IDs, such as (non-mnemonic) telephone numbers, video conference IDs, and so on.
 				</p>
 
-				<p>Even though both XMPP and email use the same address format, they are distinct services, not unlike fax, text messages (SMS), and voice telephony using a single `telephone number' format, even though the services differ in what they exchange, the
+				<p>Even though both XMPP and email use the same address format, they are distinct services, not unlike fax, text messages (SMS), and voice telephony using a single <i>telephone number</i> format, even though the services differ in what they exchange, the
 					protocol, and the typical uses.
 				</p>
 
-				<p>Unlike proprietary instant messaging services, XMPP allows anyone operating a domain and a server to provide XMPP service for its users. XMPP was designed from the start to allow these servers to easily interoperate, making it easy for <em>userA@serverA</em>					to communicate with <em>userB@serverB</em>, as if they were on the same server. This federated design enables privacy from the start, there is no central authority which knows what you are doing when and who your friends are. Only servers with a
+				<p>Unlike proprietary instant messaging services, XMPP allows anyone operating a domain and a server to provide XMPP service for its users. XMPP was designed from the start to allow these servers to easily interoperate, making it easy for <em>userA@serverA</em> to communicate with <em>userB@serverB</em>, as if they were on the same server. This federated design enables privacy from the start, there is no central authority which knows what you are doing when and who your friends are. Only servers with a
 					need to know (because they host an account for one of your friends) will ever know anything about you; third parties remain ignorant.
 				</p>
 
 				<h2 class="clear"><a name="login" class="anchor" href="#login"></a>2. First Login</h2>
 
 				<p>
-					For this section, we assume that you are using JSXC with unified login, i.e., logging in to your web application such as SOGo or ownCloud will also log you into your JSXC XMPP Chat.
+					For this section, we assume that you are using JSXC with unified login, i.e., logging in to your web application such as SOGo or ownCloud will also log you into your JSXC XMPP Chat. This is the default and recommended way to run JSXC.
 				</p>
 
 				<p>
 					After successful login, the right hand side of your application will show the JSXC bar. During the first login with a browser, the JSXC bar will display that it is creating your security key. After a short while, the display will change to your roster.
-					Already during key generation, you can use the main application as before. JSXC functions will only be available after <b>key generation</b> finishes. The key is stored in your browser and not sent to any server.
+					Already during key generation, you can use the main application as before. JSXC functions will only be available after <b>key generation</b> finishes. The key is safely stored in your browser and not sent to any server.
 				</p>
 				<p>
-					If you would like to use more screen real estate for your application, you can resize or <b>hide</b> the JSXC bar by clicking on the vertical dividing line to the main application. It can be restored by clicking on the right edge of the window. Your
+					If you would like to use more screen real estate for your application, you can resize or <b>hide</b> the JSXC bar by dragging or clicking the vertical dividing line to the main application. A hidden JSXC bar can be restored by clicking on the right edge of the window. Your
 					web browser will remember the bar visibility.
 				</p>
 
 				<h2 class="clear"><a name="roster" class="anchor" href="#roster"></a>3. Roster Management</h2>
 				<p>
-					If you have previously used XMPP for that account, e.g., from another JSXC-enabled application or a native XMPP/Jabber client, your roster, the list appearing in the JSXC bar after the login, will already be populated with the contacts. As with all XMPP
+					If you have previously used XMPP for that account, e.g., from another JSXC-enabled application or a native XMPP/Jabber client, your roster — the list appearing in the JSXC bar after the login — will already be populated with the contacts. As with all XMPP
 					clients, the roster is stored on the XMPP server, so your contact list will be available to any XMPP client, including JSXC.
 				</p>
 				<img class="full-row" src="images/manual/manual-roster.png" alt="Screenshot application">
@@ -65,7 +65,7 @@ permalink: /:path/:basename:output_ext
 				<h3 class="clear"><a name="add" class="anchor" href="#"></a>Adding a Contact</h3>
 				<p>
 					To add a contact, click on the <b>gear icon</b> at the bottom right corner and select <b>Add Buddy</b>; then enter the JID (typically the email address) of your buddy, optionally with a (nick) name under which the buddy should be shown in your roster.
-					This name is only visible to you; if no full name is given, then the JID will be displayed.
+					This nick name is only visible to you; so feel free to make them easy for you to remember. If no full name is given, then the JID will be displayed.
 				</p>
 				<img class="full-row" src="images/manual/manual-add1.png" alt="Screenshot contact addition">
 				<img class="full-row" src="images/manual/manual-add2.png" alt="Screenshot contact addition">
@@ -89,7 +89,7 @@ permalink: /:path/:basename:output_ext
 				<h3><a name="delete" class="anchor" href="#"></a>Deleting a Contact</h3>
 				<p>
 					When hovering the mouse over a contact, two icons will float in from the right: A pen to <a href="#modify">edit</a> the name, and a cross to delete it. Clicking on the cross icon will delete the contact from your roster and will revoke their right
-					of seeing your online status.
+					of seeing your online status. If you do that by mistake, simply <a href="#add">add the user again</a>.
 				</p>
 
 				<h2 class="clear"><a name="notifications" class="anchor" href="#notifications"></a>4. Notifications</h2>
@@ -100,12 +100,11 @@ permalink: /:path/:basename:output_ext
 				</p>
 				<img class="full-row" src="images/manual/manual-notify1.png" alt="Screenshot notification request">
 				<p>
-					When your chat tab or window is not active, most modern browsers offer the ability to notify you through the operating system's notification facility, often a message appearing in one of the screen corners. This allows you to continue your work while
+					When your chat tab or window is not active, most browsers now offer the ability to notify you through the operating system, often with a message appearing in one of the screen corners. This allows you to continue your work while
 					being able to immediately respond to incoming requests or messages.
 				</p>
 				<img class="full-row" src="images/manual/manual-notify2.png" alt="Screenshot notification request">
-				<p>To prevent abuse, web pages by default do not have the right to pop up notification messages. On the first message JSXC receives while inactive, it will therefore ask you whether it should notify you about background activity at all. If you want this
-					to be enabled, the browser wants you to confirm this.
+				<p>To prevent abuse, web pages by default do not have the right to pop up such notification messages. On the first message JSXC receives while inactive, it will therefore ask you whether it should notify you about background activity in the future. The browser will ask for your confirmation.
 				</p>
 				<img class="full-row" src="images/manual/manual-notbox.png" alt="Screenshot notification">
 
@@ -113,7 +112,7 @@ permalink: /:path/:basename:output_ext
 				<img class="full-row" src="images/manual/manual-status.png" alt="Screenshot notification request">
 				<p>
 					You can tell your contacts whether you are available, e.g. by setting the status to <b>away</b> or <b>do not disturb</b>. Your contacts will see this by the colored bar left of their roster entry for you which will change to yellow or red as a result
-					of this.
+					of this choice.
 				</p>
 
 				<h2 class="clear"><a name="chat" class="anchor" href="#chat"></a>6. Chatting</h2>
@@ -127,13 +126,13 @@ permalink: /:path/:basename:output_ext
 					Reopening a chat window will restore the chat history. The <b>chat history</b> is only saved in your browser and can be <b>deleted</b> using the gear icon in the chat window.
 				</p>
 				<p>
-					The actual chat process is straightforward: Type into the <b>…Message</b> input field and hit return; answers will appear in the chat window.
+					The actual chat process is straightforward: Type into the <b>Message</b> input field and hit return; your message and the answers will appear in the chat window.
 				</p>
 
 				<h3 class="clear"><a name="secure" class="anchor" href="#secure"></a>Activating Encryption</h3>
 				<p>
-					If your XMPP server is configured correctly, all communication between JSXC and the XMPP server is encrypted. However, if you have contacts on other servers, the communication between those two servers may not always be. Even though every day, encryption
-					is activated on more servers, e.g., communication with Google Talk servers is guaranteed to go over the network unencrypted.
+					If your XMPP server is configured correctly, all communication between JSXC and the XMPP server is encrypted. However, if you have contacts on other servers, the communication between those two servers may not always be. Even though encryption
+					is activated on more servers every day, e.g., communication with Google Talk servers is guaranteed to go over the network unencrypted.
 				</p>
 				<p>
 					You are not sure about your system configuration, have something sensitive to discuss, or just want an extra layer of security and privacy? End-to-end encryption of your messages can be added by clicking on the <b>padlock icon</b>. On the first use,
