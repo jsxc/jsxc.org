@@ -5,8 +5,11 @@ permalink: /blog/:year/:month/:day/:title.html
 gems:
   - jekyll-feed
   - jekyll-paginate
+  - octopress-autoprefixer
 
 markdown: redcarpet
+
+include: ["vendor"]
 
 defaults:
   -

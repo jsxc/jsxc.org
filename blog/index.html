@@ -4,39 +4,53 @@ title: Blog
 bodyScript: |
    <script src="/javascripts/jquery.jscroll.min.js"></script>
    <script type="text/javascript">
-   $('#main-content').jscroll({
-      contentSelector: ".posts",
-      nextSelector: '.next'
+   $('#posts>.container').jscroll({
+      autoTrigger: false,
+      contentSelector: "#posts>.container",
+      nextSelector: '.next',
+      loadingHtml: '<div class="row text-center spinner-item"><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span></div>',
+      callback: function(){
+        $('.jscroll-added .container').removeClass('container');
+      }
    });
    </script>
 ---
 
-<h2>Recent Articles</h2>
-
-<p></p>
-
-<div class="posts">
-   <!-- This loops through the paginated posts -->
-   {% for post in paginator.posts %}
-      <div class="post">
-         <p class="meta">
-            {{ post.date | date: '%A %B %d %Y' }}
-         </p>
-         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-         <!-- <div class="content">
-            {{ post.excerpt }}
-         </div> -->
-     </div>
-   {% endfor %}
+<section id="posts">
+<div class="container">
+  {% for post in paginator.posts %}
+  <div class="row animatedParent animateOnce post-item" data-appear-top-offset='-150'>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="vertical-timeline">
+              <div class="vertical-timeline-block">
+                  <div class="vertical-timeline-icon">
+                      <i class="fa fa-user"></i>
+                  </div>
+                  <div class="vertical-timeline-content blog-item animated fadeInDownShort">
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <!-- <p>{{post.excerpt | remove: '<p>' | remove: '</p>'}}.</p>
+                    <p class="text-right"><a href="{{post.url}}"><i class="fa fa-plus-circle" aria-hidden="true"></i> read more</a></p>-->
+                    <p class="blog-meta"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: '%A %B %d %Y' }}</p>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>
+  {% endfor %}
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <div class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+        {% endif %}
+        <span class="page_number ">page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next">
+              <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i><span class="next-caption">More</span>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </div>
-
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-  {% endif %}
-  <span class="page_number ">page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% endif %}
-</div>
+</section>

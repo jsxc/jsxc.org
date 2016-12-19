@@ -1,2 +1,5 @@
 source 'https://rubygems.org'
-gem 'github-pages'
+gem 'redcarpet'
+gem 'octopress-autoprefixer'
+gem 'jekyll-feed'
+gem 'jekyll-paginate'

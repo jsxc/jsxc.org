@@ -3,51 +3,65 @@ layout: default
 title: FAQ
 permalink: /:path/:basename:output_ext
 ---
+<section id="">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-header">Frequently Asked Questions</h2>
+				<h3 class="section-subheader">and most common answers</h3>
+			</div>
+		</div>
+		<div class="row">
+      <div class="col-lg-12">
+				<h3>BOSH server not reachable</h3>
+				<p>There are two main reasons why you can not reach your BOSH server:</p>
+				<ol>
+					<li>
+						<strong>Reason:</strong> Your BOSH server does not work correctly.<br />
+						<strong>Test:</strong> Use another XMPP client, like Pidgin to verify that your HTTP binding is working as expected.<br />
+						<strong>Solution:</strong> Fix your configuration ;-).
+					</li>
+					<li>
+						<strong>Reason:</strong> You are violating the browser same-origin-policy (SOP), which prevents cross-side requests between sites with different domains or ports (protocols).<br />
+						<strong>Test:</strong> Open your JavaScript console and look for errors.<br />
+						<strong>Solution 1:</strong> Enable CORS for your BOSH server. Enabled by default in ejabberd; Prosody needs <code>cross_domain_bosh = true</code>. If you have a modified content-security-policy (as used in ownCloud), then add your BOSH domain to the <code>default-src</code> section.<br />
+						<strong>Solution 2:</strong> Create a proxy as described in our <a href="https://github.com/jsxc/jsxc/wiki/Prepare-apache">Apache setup guide</a>.
+					</li>
+				</ol>
+			</div>
+		</div>
+		<div class="row">
+      <div class="col-lg-12">
+				<h2>Glossary</h2>
 
-<h2>Frequently Asked Questions</h2>
-
-<h3>BOSH server not reachable</h3>
-<p>There are two main reasons why you can not reach your BOSH server:</p>
-<ol>
-	<li>
-		<strong>Reason:</strong> Your BOSH server does not work correctly.<br />
-		<strong>Test:</strong> Use another XMPP client, like Pidgin to verify that your HTTP binding is working as expected.<br />
-		<strong>Solution:</strong> Fix your configuration ;-).
-	</li>
-	<li>
-		<strong>Reason:</strong> You are violating the browser same-origin-policy (SOP), which prevents cross-side requests between sites with different domains or ports (protocols).<br />
-		<strong>Test:</strong> Open your JavaScript console and look for errors.<br />
-		<strong>Solution 1:</strong> Enable CORS for your BOSH server (Default for ejabberd; prosody needs <code>cross_domain_bosh = true</code>) and if you have a modified content-security-policy (e.g. owncloud), then add your BOSH domain to the <code>default-src</code> section.<br />
-		<strong>Solution 2:</strong> Create a proxy like descripted in our <a href="https://github.com/jsxc/jsxc/wiki/Prepare-apache">prepare apache guide</a>.
-	</li>
-</ol>
-
-<h2>Glossary</h2>
-
-<h3>
-	<a name="jid" class="anchor" href="#jid"><span class="octicon octicon-link"></span></a>JID
-</h3>
-<p>
-	"Jabber ID", from the initial name of <a href="#xmpp">XMPP</a>. The ID used for identifying XMPP users, c.f. <a href="manual.html#intro">the user manual's Introduction section</a>.
-</p>
-<h3>
-	<a name="otr" class="anchor" href="#otr"><span class="octicon octicon-link"></span></a>OTR
-</h3>
-<p>Off-The-Record messaging; a mechanism to model secure communication along the lines of a personal, private discussion. It provides repudiation, i.e., any party can later plausibly deny to third parties they did not say this.</p>
-<h3>
-	<a name="smp" class="anchor" href="#smp"><span class="octicon octicon-link"></span></a>SMP
-</h3>
-<p>
-	<a href="http://en.wikipedia.org/wiki/Socialist_millionaire">Socialist Millionaires Protocol</a>; a user-friendly protocol to mutually authenticate two humans who already share some information.
-</p>
-<h3>
-	<a name="wisechat" class="anchor" href="#wisechat"><span class="octicon octicon-link"></span></a>WISEchat
-</h3>
-<p>Web-Integrated, Secure, Enhanced Chat; the concept of enabling secure multi-media communications directly from the web browser. JSXC is our implementation of this concept.</p>
-<h3>
-	<a name="xmpp" class="anchor" href="#xmpp"><span class="octicon octicon-link"></span></a>XMPP
-</h3>
-<p>Extensible Messaging and Presence Protocol, formerly known as Jabber; an Internet standard and open protocol for instant messaging. The XMPP servers by default automatically build a federation, allowing presence information and messages being shared by users according to their privacy preferences, reducing the impact of security breaches.</p>
-<p>
-	In most organizations, the XMPP username ("JID") corresponds to the (mnemonic) email address, reducing the need to remember additional (non-mnemonic) telephone numbers, even for audio conversations, and thus paving the way toward real Unified Communications. More information can be found in <a href="manual.html#intro">the user manual</a>.
-</p>
+				<h3>
+					<a name="jid" class="anchor" href="#jid"><span class="octicon octicon-link"></span></a>JID
+				</h3>
+				<p>
+					"Jabber ID", from the initial name of <a href="#xmpp">XMPP</a>. The ID used for identifying XMPP users, c.f. <a href="manual.html#intro">the user manual's Introduction section</a>.
+				</p>
+				<h3>
+					<a name="otr" class="anchor" href="#otr"><span class="octicon octicon-link"></span></a>OTR
+				</h3>
+				<p>Off-The-Record messaging; a mechanism to model secure communication along the lines of a personal, private discussion. It provides repudiation, i.e., any party can later plausibly deny to third parties they did not say this.</p>
+				<h3>
+					<a name="smp" class="anchor" href="#smp"><span class="octicon octicon-link"></span></a>SMP
+				</h3>
+				<p>
+					<a href="http://en.wikipedia.org/wiki/Socialist_millionaire">Socialist Millionaires Protocol</a>; a user-friendly protocol to mutually authenticate two humans who already share some information.
+				</p>
+				<h3>
+					<a name="wisechat" class="anchor" href="#wisechat"><span class="octicon octicon-link"></span></a>WISEchat
+				</h3>
+				<p>Web-Integrated, Secure, Enhanced Chat; the concept of enabling secure multi-media communications directly from the web browser. JSXC is our implementation of this concept.</p>
+				<h3>
+					<a name="xmpp" class="anchor" href="#xmpp"><span class="octicon octicon-link"></span></a>XMPP
+				</h3>
+				<p>Extensible Messaging and Presence Protocol, formerly known as Jabber; an Internet standard and open protocol for instant messaging. The XMPP servers by default automatically build a federation, allowing presence information and messages being shared by users according to their privacy preferences, reducing the impact of security breaches.</p>
+				<p>
+					In most organizations, the XMPP username ("JID") corresponds to the (mnemonic) email address, reducing the need to remember additional (non-mnemonic) telephone numbers, even for audio conversations, and thus paving the way toward real Unified Communications. More information can be found in <a href="manual.html#intro">the user manual</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
