@@ -361,7 +361,7 @@ section {
   background-color: #fff;
   .feature-item {
     margin-bottom: 30px;
-    /*overflow: hidden;*/
+    min-height: 80px;
     &:hover {
       /*.feature-icon {
         color: #fff;
