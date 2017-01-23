@@ -21,6 +21,7 @@
     "css3-animate-it": "iomdesign/css3-animate-it#f5be8f5f8698272efe773b9beb642905f967f7fd",
     "font-awesome": "^4.7.0",
     "jquery": "^3.1.1",
-    "jquery-colorbox": "^1.6.4"
+    "jquery-colorbox": "^1.6.4",
+    "jscroll": "^2.3.5"
   }
 }
