@@ -13,23 +13,26 @@ permalink: /:path/:basename:output_ext
       </div>
       <div class="row">
          <div class="col-lg-12">
-            <p class="text-center"><strong><i class="fa fa-exclamation-circle text-blue" aria-hidden="true"></i> Beta service!</strong> This service is currently in testing stage and only available for OJSXC >= 3.3.0.</p>
+            <p class="text-center"><strong><i class="fa fa-exclamation-circle text-blue" aria-hidden="true"></i> Beta service!</strong> This service is currently in testing stage and only available for OJSXC &gt;= 3.3.0.</p>
 
             <p>You like to have your own full-blown XMPP server, without to hassle with the installation and maintenance of a server?
-               Good news for you: JSXC will host your server for free*.</p>
+               Good news for you: JSXC will host your XMPP server for free<sup>*</sup>.</p>
 
-            <p>You can get it in 4 easy steps:</p>
+            <p>You can get your own XMPP server in 4 easy steps:</p>
             <ul>
-               <li>Go to the Nextcloud app store and install the "JavaScript XMPP Chat"</li>
-               <li>Open your admin page</li>
+               <li>Go to the <a href="https://apps.nextcloud.com/apps/ojsxc" target="_blank">Nextcloud app store</a>
+                   and manually install the "JavaScript XMPP Chat" 3.3.0 beta<br/>
+                   (once 3.3.0 final is released, you can just click "Install" in your Nextcloud "Apps" page)</li>
+               <li>In Nextcloud, open the admin page for JSXC</li>
                <li>Select "Managed"</li>
-               <li>Click on "Register" and your done</li>
+               <li>Click "Register" and you are done. 20 to 30 seconds later, you will be notified
+                   that everything has been set up. Congratulations to your XMPP domain!</li>
             </ul>
          </div>
       </div>
       <div class="row">
          <div class="col-lg-12 text-center">
-            <p class="text-muted">* up to 20 users in the testing stage</p>
+            <p class="text-muted"><sup>*</sup>up to 20 users per domain during beta test</p>
          </div>
       </div>
       <div class="row">
@@ -50,7 +53,8 @@ permalink: /:path/:basename:output_ext
       <div class="row">
          <div class="col-lg-12">
             <h4>Is it a real XMPP server?</h4>
-            <p>Yes. You will get your own virtual host on our Ejabberd installation.</p>
+            <p>Yes. You will get your own virtual host on our <a href="https://ejabberd.im" target="_blank">ejabberd</a>
+               XMPP server installation.</p>
 
             <h4>Which XMPP domain will I get?</h4>
             <p>We will use your Nextcloud domain as subdomain of <em>jsxc.ch</em>. For example, if use <em>cloud.mydomain.com</em> for
@@ -62,9 +66,13 @@ permalink: /:path/:basename:output_ext
                or <a href="https://github.com/siacs/Conversations" target="_blank">Conversations</a>. Tip: Use app passwords.
 
             <h4>Is this safe?</h4>
-            <p>Sure. We do not have access to your Nextcloud data and all XMPP connections from JSXC will use time-limited tokens, so we will not be able to obtain your password.
-               If you use a third-party client, we recommend to use app passwords (and disable file access, just in case).</p>
-            <p><a href='https://check.messaging.one/result.php?domain=jsxc.org&amp;type=client'>
+            <p>Sure.</p>
+            <ul>
+            <li> We do not have access to your Nextcloud data and all XMPP connections from JSXC will use time-limited tokens, so we will not be able to obtain your password.</li>
+            <li>If you use a third-party client, we recommend to use app passwords (and disable file access, just in case).</li>
+            <li>We use encrypted connections everywhere. In fact, the process of obtaining the certificats for your new XMPP domain take up the largest part of the registration waiting time.</li>
+            </ul>
+            <p><a href='https://check.messaging.one/result.php?domain=jsxc.org&amp;type=client' target="_blank">
                <img src='https://check.messaging.one/badge.php?domain=jsxc.org' alt='IM observatory score' /></a></p>
 
             <h4>Is this federated and what the hack is federated?</h4>
