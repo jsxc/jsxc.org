@@ -1,0 +1,95 @@
+---
+layout: default
+title: Managed Server
+permalink: /:path/:basename:output_ext
+---
+<section>
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12 text-center">
+            <h2 class="section-header">Managed Server</h2>
+            <h3 class="section-subheader">XMPP hosting by JSXC</h3>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-12">
+            <p class="text-center"><strong><i class="fa fa-exclamation-circle text-blue" aria-hidden="true"></i> Beta service!</strong> This service is currently in testing stage and only available for OJSXC >= 3.3.0.</p>
+
+            <p>You like to have your own full-blown XMPP server, without to hassle with the installation and maintenance of a server?
+               Good news for you: JSXC will host your server for free*.</p>
+
+            <p>You can get it in 4 easy steps:</p>
+            <ul>
+               <li>Go to the Nextcloud app store and install the "JavaScript XMPP Chat"</li>
+               <li>Open your admin page</li>
+               <li>Select "Managed"</li>
+               <li>Click on "Register" and your done</li>
+            </ul>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-12 text-center">
+            <p class="text-muted">* up to 20 users in the testing stage</p>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-12 text-center">
+            <img class="full-row" src="assets/v3.3.0-registration.png" alt="Screenshot registration">
+         </div>
+      </div>
+   </div>
+</section>
+<section id="managed-faq">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12 text-center">
+            <h2 class="section-header">FAQ</h2>
+            <h3 class="section-subheader">Frequently Asked Questions</h3>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-12">
+            <h4>Is it a real XMPP server?</h4>
+            <p>Yes. You will get your own virtual host on our Ejabberd installation.</p>
+
+            <h4>Which XMPP domain will I get?</h4>
+            <p>We will use your Nextcloud domain as subdomain of jsxc.ch. For example if use cloud.mydomain.com for
+               your Nextcloud installation, we will use cloud.mydomain.com.jsxc.ch as your XMPP domain.</p>
+
+            <h4>Can I use other clients?</h4>
+            <p>As we said, you will get a full-blown XMPP server and this means you can use every XMPP client.
+               Try <a href="http://pidgin.im/" target="_blank">Pidgin</a>, <a href="https://gajim.org/" target="_blank">Gajim</a>
+               or <a href="https://github.com/siacs/Conversations" target="_blank">Conversations</a>. Tip: Use app passwords.
+
+            <h4>Is this save?</h4>
+            <p>Sure. We don't have access to your Nextcloud data and all XMPP connections from JSXC will use time-limited tokens, so we don't get your password.
+               If you use a third-party client we recommend to use app passwords. You should also make sure, that no one else is able to install another Nextcloud
+               instance on your host, because in this case he can overwrite your registration.</p>
+            <p><a href='https://check.messaging.one/result.php?domain=jsxc.org&amp;type=client'>
+               <img src='https://check.messaging.one/badge.php?domain=jsxc.org' alt='IM observatory score' /></a></p>
+
+            <h4>Is this federated and what the hack is federated?</h4>
+            <p>Federated means you are able to communicate with every other XMPP user if they support
+               server-to-server communication. It's like E-Mail and yes, our XMPP server supports this.</p>
+
+            <h4>Are there really no constraints?</h4>
+            <p>Ok, you caught us. Our service doesn't work if you use E-Mail addresses as user ids in Nextcloud, but we are working on this.</p>
+         </div>
+      </div>
+   </div>
+</section>
+<section>
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12 text-center">
+            <h2 class="section-header">Issue Tracker</h2>
+            <h3 class="section-subheader">How to report bugs</h3>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-lg-12">
+            <p>Please use our <a href="https://github.com/jsxc/jsxc/issues">issue tracker</a> to report bugs and suggestions for improvements.</p>
+         </div>
+      </div>
+   </div>
+</section>

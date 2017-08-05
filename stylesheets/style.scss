@@ -80,6 +80,7 @@ img.full-row {
   max-width: 100%;
   margin: 15px auto;
   display: block;
+  border: 5px solid #e1e1e1;
 }
 .downloads {
   margin: 50px 0;
@@ -258,7 +259,7 @@ body.landing {
 section {
   padding: 100px 0;
   p {
-    margin-bottom: 10px;
+    margin-bottom: 1.5em;
   }
   h2 {
     font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
@@ -288,7 +289,7 @@ section {
     }
   }
   h4 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #474747;
   }
   ul, ol {
@@ -332,6 +333,15 @@ section {
   }
   &:nth-child(odd) {
     background-color: #fff;
+  }
+  strong {
+     border-bottom: 2px solid $lightblue;
+  }
+  .text-blue {
+     color: $blue;
+  }
+  .text-lightblue {
+     color: $lightblue;
   }
 }
 #mainFeatures {
@@ -713,6 +723,14 @@ section {
     margin-bottom: 20px;
     font-size: 1.2em;
   }
+}
+#managed-faq {
+   p {
+    margin: 10px 0 30px 15px;
+   }
+   p + p {
+      margin-top: -20px;
+   }
 }
 #team {
   .team-member {
