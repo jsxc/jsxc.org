@@ -5,17 +5,25 @@
 <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 {% if page.description %}
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@jsxc_org"/>
+<meta name="twitter:title" content="{{page.description}}"/>
 <meta name="description" content="{{page.description}}"/>
 <meta name="og:description" content="{{page.description}}"/>
 {% endif %}
 {% if page.image %}
 <meta itemprop="image" content="{{ site.url }}{{page.image}}">
+<meta name="twitter:image" content="{{ site.url }}{{page.image}}">
 <meta name="og:image" content="{{ site.url }}{{page.image}}"/>
 {% else %}
 <meta itemprop="image" content="{{ site.url }}/images/jsxc-2-1.png">
+<meta name="twitter:image" content="{{ site.url }}/images/jsxc-2-1.png"/>
 <meta name="og:image" content="{{ site.url }}/images/jsxc-2-1.png"/>
 {% endif %}
-<meta name="og:site_name" content="JSXC"/>
+<meta name="og:site_name" content="JSXC — The Open Chat"/>
+<meta rel="icon" href="{{ site.url}}/images/jsxc-icon.png"/>
+<meta rel="apple-touch-icon-precomposed" href="{{ site.url}}/images/jsxc-icon.png"/>
+<meta rel="msapplication-TileImage" href="{{ site.url}}/images/jsxc-icon.png"/>
 
 {% feed_meta %}
 
