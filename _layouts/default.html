@@ -6,8 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@jsxc_org"/>
+{% if page.title %}
+<meta name="twitter:title" content="{{page.title}}"/>
+<meta name="og:title" content="{{page.title}}"/>
+{% endif %}
 {% if page.description %}
-<meta name="twitter:title" content="{{page.description}}"/>
 <meta name="description" content="{{page.description}}"/>
 <meta name="og:description" content="{{page.description}}"/>
 {% endif %}
