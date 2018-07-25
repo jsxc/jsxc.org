@@ -4,6 +4,7 @@
 <meta charset='utf-8'/>
 <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta property="og:type" content="article"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@jsxc_org"/>
 {% if page.title %}
@@ -17,10 +18,12 @@
 {% if page.image %}
 <meta itemprop="image" content="{{ site.url }}{{page.image}}">
 <meta name="twitter:image" content="{{ site.url }}{{page.image}}">
+<meta name="twitter:image:src" content="{{ site.url }}{{page.image}}">
 <meta name="og:image" content="{{ site.url }}{{page.image}}"/>
 {% else %}
 <meta itemprop="image" content="{{ site.url }}/images/jsxc-2-1.png">
 <meta name="twitter:image" content="{{ site.url }}/images/jsxc-2-1.png"/>
+<meta name="twitter:image:src" content="{{ site.url }}/images/jsxc-2-1.png"/>
 <meta name="og:image" content="{{ site.url }}/images/jsxc-2-1.png"/>
 {% endif %}
 <meta name="og:site_name" content="JSXC — The Open Chat"/>
