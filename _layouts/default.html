@@ -9,8 +9,10 @@
 <meta name="og:description" content="{{page.description}}"/>
 {% endif %}
 {% if page.image %}
+<meta itemprop="image" content="{{ site.url }}{{page.image}}">
 <meta name="og:image" content="{{ site.url }}{{page.image}}"/>
 {% else %}
+<meta itemprop="image" content="{{ site.url }}/images/jsxc-2-1.png">
 <meta name="og:image" content="{{ site.url }}/images/jsxc-2-1.png"/>
 {% endif %}
 <meta name="og:site_name" content="JSXC"/>
