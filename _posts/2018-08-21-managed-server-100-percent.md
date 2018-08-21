@@ -1,6 +1,6 @@
 ---
 author: marcel_waldvogel
-title: XMPP Managed Server achieving 100% Compliance
+title: XMPP Managed Server achieves 100% compliance
 ---
 The restless guys behind [*Conversations*](https://conversations.im) together with [Rishi Raj](https://rishiraj.me/) released an
 [online and extended version of their *XMPP Compliance Tester*](https://compliance.conversations.im).
