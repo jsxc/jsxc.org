@@ -7,7 +7,7 @@ The restless guys behind [*Conversations*](https://conversations.im) together wi
 
 We are proud to announce that we upgraded our [Managed Server](/managed.html) in the past 24 hours to achieve 100% compatibility:
 
-[!https://compliance.conversations.im/badge/jsxc.ch](https://compliance.conversations.im/server/jsxc.ch)
+[![compliance badge jsxc.ch](https://compliance.conversations.im/badge/jsxc.ch/)](https://compliance.conversations.im/server/jsxc.ch)
 
 As a service to the community, we have also updated our *easy-XMPP-setup* documentation to automatically create a compatible setup.
 So, from the start, you have a modern setup, which will make it easier to communicate for your users to communicate among each other
