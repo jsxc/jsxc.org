@@ -408,6 +408,10 @@ section {
   .feature-content {
     margin-top: 15px;
     padding-right: 30px;
+	  
+    .text-muted {
+        margin-bottom: 0;
+    }
 
     /*h4, p {
       color: #2879d0;
