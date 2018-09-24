@@ -24,7 +24,7 @@ $darkblue: #185da8;
   src: local('PT Sans'), local('PTSans-Regular'), url(../fonts/PT_Sans-Web-Regular.ttf) format('truetype');
 }
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -266,7 +266,6 @@ section {
     font-size: 1.8em;
     letter-spacing: -1px;
     color: #474747;
-    margin-top: 80px;
     margin-bottom: 10px;
     &.section-header {
       margin: 0;
@@ -277,7 +276,6 @@ section {
     font-size: 1.4em;
     letter-spacing: -1px;
     color: #474747;
-    margin-top: 30px;
     margin-bottom: 10px;
 
     &.section-subheader {
@@ -408,7 +406,7 @@ section {
   .feature-content {
     margin-top: 15px;
     padding-right: 30px;
-	  
+
     .text-muted {
         margin-bottom: 0;
     }
@@ -681,11 +679,12 @@ section {
     border-radius: 50%;
   }
   h2 {
-    margin-top: 30px;
+    margin-top: 2em;
     margin-bottom: 20px;
     color: #474747;
   }
   h3 {
+    margin-top: 2em;
     margin-bottom: 10px;
     font-size: 1.1em;
     font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
@@ -693,6 +692,12 @@ section {
   }
   h3 + ul {
     margin-top: 20px;
+  }
+  h4 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+    margin-top: 2em;
   }
   .navigation {
     margin-top: 80px;
