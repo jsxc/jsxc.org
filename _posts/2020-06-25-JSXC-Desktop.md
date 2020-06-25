@@ -1,6 +1,7 @@
 ---
 author: klaus_herberth
 image: /assets/desktop/large-2.png
+description: First experimental release of JSXC for your desktop.
 ---
 
 There are many [XMPP clients][xmpp-clients] out there, but only a few are
