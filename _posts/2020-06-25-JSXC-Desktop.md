@@ -1,5 +1,6 @@
 ---
 author: klaus_herberth
+image: /assets/desktop/large-2.png
 ---
 
 There are many [XMPP clients][xmpp-clients] out there, but only a few are
