@@ -1,6 +1,6 @@
 ---
 author: klaus_herberth
-image: /assets/desktop/large-2.png
+image: /assets/desktop/large-2-card.png
 description: First experimental release of JSXC for your desktop.
 ---
 
